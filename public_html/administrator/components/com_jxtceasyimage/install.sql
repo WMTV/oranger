@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `#__jxtc_ezimg_images` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `published` tinyint(4) NOT NULL,
+  `checked_out` int(11) NOT NULL,
+  `checked_out_time` datetime NOT NULL,
+  `ordering` int(11) NOT NULL,
+  `filename` varchar(128) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` varchar(4096) NOT NULL,
+  `width` int(4) NOT NULL,
+  `height` int(4) NOT NULL,
+  `type` int(11) NOT NULL,
+  `size` int(11) NOT NULL,
+  `mime` varchar(64) NOT NULL,
+  `folder` varchar(128) NOT NULL,
+  `ctime` int(11) NOT NULL,
+  `mtime` int(11) NOT NULL,
+  `url` varchar(255) NOT NULL,
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `folder` (`folder`,`filename`)
+) DEFAULT CHARSET=utf8;

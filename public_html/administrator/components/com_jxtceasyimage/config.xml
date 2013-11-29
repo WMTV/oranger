@@ -1,0 +1,12 @@
+<config>
+  <fields>
+		<fieldset name="component" label="EZIMG_CONFIGURATION" description="EZIMG_CONFIGURATION_DESC">
+	    <field name="swidth" type="text" default="64" label="Small Thumbnail Width" description="Enter a numeric value (pixels)." />
+	    <field name="sheight" type="text" default="64" label="Small Thumbnail Height" description="Enter a numeric value (pixels)." />
+	    <field name="mwidth" type="text" default="128" label="Medium Thumbnail Width" description="Enter a numeric value (pixels)." />
+	    <field name="mheight" type="text" default="128" label="Medium Thumbnail Height" description="Enter a numeric value (pixels)." />
+	    <field name="lwidth" type="text" default="256" label="Large Thumbnail Width" description="Enter a numeric value (pixels)." />
+	    <field name="lheight" type="text" default="256" label="Large Thumbnail Height" description="Enter a numeric value (pixels)." />
+    </fieldset>
+  </fields>
+</config>

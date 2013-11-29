@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>jxtceasyimage</name>
+	<author>JoomlaXTC</author>
+	<creationDate>2013-09-24</creationDate>
+	<copyright>Copyright (C) 2012-2013 Monev Software LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.joomlaxtc.com</authorUrl>
+	<version>1.5.1</version>
+	<description>JoomlaXTC Easy Image Gallery component</description>
+	<install>
+		<sql>
+	    <file charset="utf8" driver="mysql">install.sql</file>
+	  </sql>
+	</install>
+	<uninstall>
+		<sql>
+	    <file charset="utf8" driver="mysql">uninstall.sql</file>
+	  </sql>
+	</uninstall>
+	<files folder="site">
+		<folder>css</folder>
+		<folder>fields</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>skins</folder>
+		<folder>views</folder>
+		<folder>language</folder>
+		<filename>jxtceasyimage.php</filename> 
+		<filename>controller.php</filename> 
+		<filename>index.html</filename>
+	</files>
+	<languages folder="site/language/">
+		<language tag="en-GB">en-GB.com_jxtceasyimage.ini</language>
+	</languages>
+	<administration>
+		<menu link="option=com_jxtceasyimage" img="components/com_jxtceasyimage/support/images/jxtc_icon.png">EZIMG_MENU</menu>
+    <submenu>
+        <menu link="option=com_jxtceasyimage&amp;view=thumbnails">EZIMG_THUMBNAILS</menu>
+        <menu link="option=com_jxtceasyimage&amp;view=details">EZIMG_DETAILS</menu>
+        <menu link="option=com_jxtceasyimage&amp;view=about">EZIMG_ABOUT</menu>
+    </submenu>
+		<files folder="admin">
+			<folder>controllers</folder> 
+			<folder>models</folder> 
+			<folder>support</folder> 
+			<folder>tables</folder> 
+			<folder>views</folder> 
+			<folder>language</folder>
+			<filename>component.css</filename>
+			<filename>config.xml</filename>
+			<filename>COPYRIGHT.php</filename>
+			<filename>index.html</filename>
+			<filename>install.sql</filename>
+			<filename>jxtceasyimage.php</filename> 
+			<filename>LICENSE.php</filename>
+			<filename>uninstall.sql</filename>
+		</files>
+		<languages folder="admin/language/">
+			<language tag="en-GB">en-GB.com_jxtceasyimage.ini</language>
+      <language tag="en-GB">en-GB.com_jxtceasyimage.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

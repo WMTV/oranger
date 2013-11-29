@@ -1,0 +1,13 @@
+/log/
+/tmp/
+/sess/
+/hosting/
+/githooks/
+/mysql_log/
+/mysql/xtrabackup_*
+/mysql/backup-my.cnf
+/*/tmp/
+/*/logs/
+/*/cache/
+/*/configuration.php
+/*/administrator/cache/

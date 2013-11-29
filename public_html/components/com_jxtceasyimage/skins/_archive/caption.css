@@ -1,0 +1,116 @@
+@import url(buttons.css);
+@charset "utf-8";
+/* 
+	CSS Document
+	Copyright (c) 2011 Spotnil (http://www.spotnil.com/envato/codecanyon/li-slider/)
+	Version: 2.0 (04/20/2011)
+	
+
+*/
+	
+/* =========================== */	
+/*        Caption Rules        */	
+/* =========================== */
+
+
+.li-banner .caption_Bottom, .li-banner .caption_Top, .li-banner .caption_Left, .li-banner .caption_Right, .li-banner .caption_Custom {
+	position: absolute;
+	display:block;
+	z-index: 105;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+.li-banner .caption_Bottom {
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.li-banner .caption_Top {
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.li-banner .caption_Left {
+	top: 0px;
+	left: 0px;
+	height: 100%;
+}
+
+.li-banner .caption_Right {
+	top: 0px;
+	right: 0px;
+	height: 100%;
+}
+
+.li-banner .caption_Custom {
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.li-banner .caption_content {
+	padding: 7px 15px;
+	display: block;
+	z-index: 2;
+	color: #fff;
+	position: absolute;
+	font-size: 12px;
+}
+
+.li-banner .caption_Bottom .caption_content p, .li-banner .caption_Top .caption_content p, .li-banner .caption_Left .caption_content p, .li-banner .caption_Right .caption_content p {
+	padding: 5px 0px 0px 0px;
+	margin: 0px;
+	letter-spacing: 150%;
+	clear: right;
+	float: left;
+}
+
+.li-banner .caption_Bottom .caption_content a, .li-banner .caption_Top .caption_content a, .li-banner .caption_Left .caption_content a, .li-banner .caption_Right .caption_content a {
+	color: #09F;
+	font-weight: bold;
+}
+
+.li-banner .caption_Custom .caption_background {
+}
+
+.li-banner .caption_Custom .caption_content {
+	padding: 0px;
+	display: block;
+	z-index: 2;
+	color: #fff;
+	position: absolute;
+	font-size: 12px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+/*
+.li-banner ul li ul {
+	position: relative;
+	height: auto;
+	margin: auto;
+	list-style-type: square;
+}
+
+.li-banner ul li ul li {
+	display: list-item; 
+	position: relative; 
+	line-height: normal; 
+	height: auto;
+	width: auto;
+	margin: auto;
+	padding: auto;
+	list-style-type: square!important;
+	list-style-position: inside;
+
+}*/
+
+
+

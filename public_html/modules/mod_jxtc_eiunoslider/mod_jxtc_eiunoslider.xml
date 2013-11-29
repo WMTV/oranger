@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade">
+	<name>JoomlaXTC Easy Image UnoSlider</name>
+	<author>JoomlaXTC</author>
+	<creationDate>2013-01-09</creationDate>
+	<copyright>Copyright (C) 2012-2013 Monev Software LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.joomlaxtc.com</authorUrl>
+	<version>1.5.1</version>
+	<description>JoomlaXTC Easy Image UnoSlider module</description>
+	<files>
+		<filename module="mod_jxtc_eiunoslider">mod_jxtc_eiunoslider.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language/">
+		<language tag="en-GB">en-GB.mod_jxtc_eiunoslider.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/components/com_jxtceasyimage/fields/">
+			<fieldset name="basic">
+				<field name="folder" type="ezimgfolder" default="" label="Image Folder" description="Source folder for images." />
+				<field name="width" type="text" default="400" label="Slide width" description="Slide image width (in pixels)." />
+				<field name="height" type="text" default="300" label="Slide height" description="Slide image height (in pixels)." />
+
+				<field name="theme" type="folderlist" default="modern" label="Theme" hide_default="1" hide_none="1" directory="components/com_jxtceasyimage/views/unoslider/themes" description="Display theme."/>
+				<field name="zoom" type="list" default="0" label="Thumbnail type" description="Select method to build thumbnails." >
+					<option value="0">Scale to fit</option>
+					<option value="1">Zoom to center</option>
+					<option value="2">Zoom to top</option>
+				</field>
+				<field name="captions" type="list" default="2" label="Enable Captions" description="Enable or disable image captions.">
+					<option value="0">No</option>
+					<option value="1">Image title</option>
+					<option value="2">Image description</option>
+					<option value="3">Image filename</option>
+					<option value="4">Image title + description</option>
+					<option value="5">Image filename + description</option>
+					<option value="6">Image filename + title</option>
+					<option value="7">Image title + filename</option>
+				</field>
+				<field name="links" type="radio" class="btn-group" default="1" label="Enable Links" description="Enable or disable image links (if present).">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="EIUNOSLIDER_NAVIGATION">
+				<field name="indicator" type="radio" class="btn-group" default="1" label="Show Indicator" description="Enable slideshow indicator.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="indicatorautohide" type="radio" class="btn-group" default="0" label="Autohide Indicator" description="Enable or disable indicator hide on mouse over.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="navigation" type="radio" class="btn-group" default="1" label="Show Navigation" description="Enable slideshow navigation.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="navigationautohide" type="radio" class="btn-group" default="0" label="Autohide Navigation" description="Enable or disable navigation hide on mouse over.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="navigationnext" type="radio" class="btn-group" default="0" label="Autohide Next" description="Include Next button on navigation autohide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="navigationprev" type="radio" class="btn-group" default="0" label="Autohide Previous" description="Include Previous button on navigation autohide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="navigationplay" type="radio" class="btn-group" default="1" label="Autohide Play" description="Include Play button on navigation autohide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="navigationstop" type="radio" class="btn-group" default="1" label="Autohide Stop" description="Include Pause button on navigation autohide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="EIUNOSLIDER_SLIDESHOW">
+				<field name="slideshow" type="radio" class="btn-group" default="1" label="Enable Slideshow" description="Enable automatic slideshow.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="presets" type="list" default="sq_diagonal" multiple="multiple" size="10" label="Slide effects" description="Choose which animation effects to apply for image slides.">
+					<option value="none">None</option>
+					<option value="alternate_horizontal">Alternate Horizontal</option>
+					<option value="alternate_vertical">Alternate Vertical</option>
+					<option value="bar_fade_bottom">Bar fade bottom</option>
+					<option value="bar_fade_left">Bar fade left</option>
+					<option value="bar_fade_random">Bar fade random</option>
+					<option value="bar_fade_right">Bar fade right</option>
+					<option value="bar_fade_top">Bar fade top</option>
+					<option value="bar_slide_bottomleft">Bar slide bottom left</option>
+					<option value="bar_slide_bottomright">Bar slide bottom right</option>
+					<option value="bar_slide_random">Bar slide random</option>
+					<option value="bar_slide_topleft">Bar slide top left</option>
+					<option value="bar_slide_topright">Bar slide top right</option>
+					<option value="blind_bottom">Blind bottom</option>
+					<option value="blind_left">Blind left</option>
+					<option value="blind_right">Blind right</option>
+					<option value="blind_top">Blind top</option>
+					<option value="chess">Chess</option>
+					<option value="explode">Explode</option>
+					<option value="fade">Fade</option>
+					<option value="flash">Flash</option>
+					<option value="fountain">Fountain</option>
+					<option value="h_slide_left">Horizontal slide left</option>
+					<option value="h_slide_right">Horizontal slide right</option>
+					<option value="implode">Implode</option>
+					<option value="shot_left">Shot left</option>
+					<option value="shot_right">Shot right</option>
+					<option value="spiral">Spiral</option>
+					<option value="spiral_reversed">Spiral reversed</option>
+					<option value="sq_appear">Square appear</option>
+					<option value="sq_diagonal">Square diagonal</option>
+					<option value="sq_diagonal_rev">Square diagonal reverse</option>
+					<option value="sq_drop">Square drop</option>
+					<option value="sq_fade_diagonal">Square fade diagonal</option>
+					<option value="sq_fade_diagonal_rev">Square fade diagonal reverse</option>
+					<option value="sq_fade_random">Square fade random</option>
+					<option value="sq_flyoff">Square flyoff</option>
+					<option value="sq_random">Square random</option>
+					<option value="sq_squeeze">Square squeeze</option>
+					<option value="squeez">Squeeze</option>
+					<option value="stretch">Stretch</option>
+					<option value="v_slide_bottom">vertical slide bottom</option>
+					<option value="v_slide_top">Vertical slide top</option>
+					<option value="zipper_left">Zipper left</option>
+					<option value="zipper_right">Zipper right</option>
+				</field>
+				<field name="prandom" type="radio" class="btn-group" default="1" label="Randomize effects" description="Apply animation effects in random order.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="sspeed" type="text" default="4" label="Speed" description="Slideshow delay between images (in seconds)."/>
+				<field name="stimer" type="radio" class="btn-group" default="1" label="Timer" description="Enable timer display.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="shoverpause" type="radio" class="btn-group" default="1" label="Hover pause" description="Pause slideshow on mouse hover.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="scontinuous" type="radio" class="btn-group" default="1" label="Continuous" description="Disable to stop slideshow after a manual change.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="sinfinite" type="radio" class="btn-group" default="1" label="Infinite" description="Eable to loop slideshow.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="EIUNOSLIDER_ANIMATION">
+				<field name="vblocks" type="text" default="9" label="Vertical Blocks" description="Number of vertical blocks."/>
+				<field name="hblocks" type="text" default="3" label="Horizontal Blocks" description="Number of horizontal blocks."/>
+				<field name="aspeed" type="text" default="500" label="Duration" description="Duration of the animation."/>
+				<field name="adelay" type="text" default="50" label="Delay" description="Delay between blocks."/>
+				<field name="transitionvariation" type="list" default="grow|topleft" label="Transition / Variation" description="Type of block animation / variation. This sets the animation style for each block on the image.">
+					<option value="appear|alternate_horizontal">Appear Alternate horizontal</option>
+					<option value="appear|alternate_vertical">Appear Alternate vertical</option>
+					<option value="appear|bottom">Appear Bottom</option>
+					<option value="appear|bottomleft">Appear Bottom left</option>
+					<option value="appear|bottomright">Appear Bottom right</option>
+					<option value="appear|left">Appear Left</option>
+					<option value="appear|right">Appear Right</option>
+					<option value="appear|top">Appear Top</option>
+					<option value="appear|topleft">Appear Top left</option>
+					<option value="appear|topright">Appear Top right</option>
+					<option value="drop|alternate_horizontal">Drop Alternate horizontal</option>
+					<option value="drop|alternate_vertical">Drop Alternate vertical</option>
+					<option value="drop|bottom">Drop Bottom</option>
+					<option value="drop|bottomleft">Drop Bottom left</option>
+					<option value="drop|bottomright">Drop Bottom right</option>
+					<option value="drop|left">Drop Left</option>
+					<option value="drop|right">Drop Right</option>
+					<option value="drop|top">Drop Top</option>
+					<option value="drop|topleft">Drop Top left</option>
+					<option value="drop|topright">Drop Top right</option>
+					<option value="fade">Fade</option>
+					<option value="flash">Flash</option>
+					<option value="grow|bottomleft">Grow Bottom-Left</option>
+					<option value="grow|bottomright">Grow Bottom-Right</option>
+					<option value="grow|topleft">Grow Top-Left</option>
+					<option value="grow|topright">Grow Top-Right</option>
+					<option value="shrink|bottomleft">Shrink Bottom-Left</option>
+					<option value="shrink|bottomright">Shrink Bottom-Right</option>
+					<option value="shrink|topleft">Shrink Top-Left</option>
+					<option value="shrink|topright">Shrink Top-Right</option>
+					<option value="slide_in|alternate_horizontal">Slide-in Alternate horizontal</option>
+					<option value="slide_in|alternate_vertical">Slide-in Alternate vertical</option>
+					<option value="slide_in|bottom">Slide-in Bottom</option>
+					<option value="slide_in|left">Slide-in Left</option>
+					<option value="slide_in|right">Slide-in Right</option>
+					<option value="slide_in|top">Slide-in Top</option>
+					<option value="slide_out|alternate_horizontal">Slide-out Alternate horizontal</option>
+					<option value="slide_out|alternate_vertical">Slide-out Alternate vertical</option>
+					<option value="slide_out|bottom">Slide-out Bottom</option>
+					<option value="slide_out|left">Slide-out Left</option>
+					<option value="slide_out|right">Slide-out Right</option>
+					<option value="slide_out|top">Slide-out Top</option>
+					<option value="squeeze|alternate">Squeeze Alternate</option>
+					<option value="squeeze|center">Squeeze Center</option>
+					<option value="squeeze|horizontal">Squeeze Horizontal</option>
+					<option value="squeeze|vertical">Squeeze Vertical</option>
+					<option value="stretch|alternate">Stretch Alternate</option>
+					<option value="stretch|center">Stretch Center</option>
+					<option value="stretch|horizontal">Stretch Horizontal</option>
+					<option value="stretch|vertical">Stretch Vertical</option>
+					<option value="swap|bottom">Swap Bottom</option>
+					<option value="swap|left">Swap Left</option>
+					<option value="swap|right">Swap Right</option>
+					<option value="swap|top">Swap Top</option>
+				</field>
+				<field name="patterndirection" type="list" default="diagonal|topleft" label="Pattern / Direction" description="Transition pattern / direction. This sets the block order for animation.">
+					<option value="chess">Chess</option>
+					<option value="diagonal|bottomleft">Diagonal Bottom left</option>
+					<option value="diagonal|bottomright">Diagonal Bottom right</option>
+					<option value="diagonal|topleft">Diagonal Top left</option>
+					<option value="diagonal|topright">Diagonal Top right</option>
+					<option value="explode|bottom">Explode Bottom</option>
+					<option value="explode|center">Explode Center</option>
+					<option value="explode|left">Explode Left</option>
+					<option value="explode|right">Explode Right</option>
+					<option value="explode|top">Explode Top</option>
+					<option value="horizontal_zigzag|bottomleft">Horizontal Zigzag Bottom left</option>
+					<option value="horizontal_zigzag|bottomright">Horizontal Zigzag Bottom right</option>
+					<option value="horizontal_zigzag|topleft">Horizontal Zigzag Top left</option>
+					<option value="horizontal_zigzag|topright">Horizontal Zigzag Top right</option>
+					<option value="horizontal|bottom">Horizontal Bottom</option>
+					<option value="horizontal|bottomleft">Horizontal Bottom left</option>
+					<option value="horizontal|bottomright">Horizontal Bottom right</option>
+					<option value="horizontal|top">Horizontal Top</option>
+					<option value="horizontal|topleft">Horizontal Top left</option>
+					<option value="horizontal|topright">Horizontal Top right</option>
+					<option value="implode|bottom">Implode Bottom</option>
+					<option value="implode|center">Implode Center</option>
+					<option value="implode|left">Implode Left</option>
+					<option value="implode|right">Implode Right</option>
+					<option value="implode|top">Implode Top</option>
+					<option value="random">Random</option>
+					<option value="spiral|bottomleft">Spiral Bottom left</option>
+					<option value="spiral|bottomright">Spiral Bottom right</option>
+					<option value="spiral|topleft">Spiral Top left</option>
+					<option value="spiral|topright">Spiral Top right</option>
+					<option value="vertical_zigzag|bottomleft">Vertical Zigzag Bottom left</option>
+					<option value="vertical_zigzag|bottomright">Vertical Zigzag Bottom right</option>
+					<option value="vertical_zigzag|topleft">Vertical Zigzag Top left</option>
+					<option value="vertical_zigzag|topright">Vertical Zigzag Top right</option>
+					<option value="vertical|bottomleft">Vertical Bottom left</option>
+					<option value="vertical|bottomright">Vertical Bottom right</option>
+					<option value="vertical|left">Vertical Left</option>
+					<option value="vertical|right">Vertical Right</option>
+					<option value="vertical|topleft">Vertical Top left</option>
+					<option value="vertical|topright">Vertical Top right</option>
+				</field>
+				<field name="flashcolor" type="colorinput" default="FFFFFF" label="Flash Color" description="Select a color for flash effect."/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="animatedlayers" type="radio" class="btn-group" default="0" label="Animated Layers" description="Animate layers encoded on image descriptions (see documentation).">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="layerscss" type="textarea" label="Layers CSS" cols="35" rows="5" description="Enter any CSS code needed for animated layers (see documentation)." />
+				<field name="forcepng" type="radio" class="btn-group" default="1" label="Use PNG thumbnails" description="When enabled, all thumbnails will be store in PNG format with transparent background." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="thumbbkg" type="colorinput" default="FFFFFF" label="Thumbnail background color" description="Background color for thumbnails. Default: FFFFFF"/>
+				<field name="layout" type="modulelayout" default="black" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

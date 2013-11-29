@@ -1,0 +1,1 @@
+-- DROP TABLE `#__jxtc_ezimg_images`;

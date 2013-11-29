@@ -1,0 +1,134 @@
+/* Readinglist View */
+.readinglist .rltoolbar {
+	padding-bottom:5px;
+	margin:0px;
+	border-bottom:1px solid #eeeeee;
+}
+.readinglist .rltoolbar select {
+	height:auto;
+}
+.readinglist .rltoolbar .btn {
+	margin:0 0 0 15px;
+	padding: 3px 9px !important;
+	height:auto;
+}
+.readinglist .category-title {
+	padding:10px 0 10px 0;
+	margin:10px 0 10px 0;
+	border:none;
+}
+.readinglist .category-count {
+	font-weight:normal;
+	font-size:12px;
+	font-style:italic;
+}
+
+.readinglist .accordion-group {
+	padding:10px;
+}
+.readinglist .rlheading {
+	display:table;
+}
+.readinglist .rlheadtoggle {
+	display:table-cell;
+	width:1%;
+	padding-right:10px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.readinglist .rlheadtitle {
+	display:table-cell;
+	width:100%;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.readinglist .rlheadtitle a,
+.readinglist .rlheadtitle a:hover,
+.readinglist .rlheadtitle a:active,
+.readinglist .rlheadtitle a:visited,
+.readinglist .rlheadtitle a:focus {
+	text-decoration:none !important;
+	background:transparent;
+	font-weight:bold;
+	color:#0A71CD;
+}
+.readinglist .rlheadbtns {
+	display:table-cell;
+	width:1%;
+	vertical-align:middle;
+	white-space:nowrap;
+}
+.readinglist .rlheadbtns .btn {
+	margin-left:5px;
+	padding: 1px 4px !important;
+	display:inline-block;
+}
+.readinglist .entry-date {
+	font-weight:normal;
+	font-size:11px;
+}
+.readinglist .rlcontent {
+	padding-top:10px;
+}
+
+/* Copy View */
+.readinglist .copyintro {
+	padding:10px;
+	font-size:14px;
+	font-weight:bold;
+	font-family:sans-serif;
+	margin-bottom:10px;
+	color:#333333;
+	background:#ffffff;
+}
+.readinglist .copycode {
+	border:1px solid #e0e0e0;
+	padding:10px;
+	margin:10px;
+	font-size:12px;
+	font-weight:normal;
+	font-family:serif;
+	color:#222222;
+	background:#f0f0f0;
+}
+
+/* Shared List View */
+.readinglist .shared_intro {
+	font-size:14px;
+	font-weight:normal;
+}
+.readinglist .shared_intro .owner {
+	font-weight:bold;
+}
+
+
+/* Module */
+.readinglist_module {}
+.rlmod_intro {
+	font-size:14px;
+	font-weight:bold;
+	font-family:sans-serif;
+	padding-bottom:10px;
+}
+.rlmodcategory {}
+.readinglist_module a {
+	display:block;
+	text-decoration:none;
+	color:#999999;
+	padding:3px 3px 3px 3px;
+}
+.readinglist_module a:hover {
+	background:#f0f0f0;
+	color:#999999;
+}
+
+.readinglist_module a.selected {
+	background:#999999;
+	color:#f0f0f0;
+}
+
+.rlmod_options {
+	margin-top:5px;
+	padding-top:5px;
+	border-top:1px solid #f0f0f0;
+}
