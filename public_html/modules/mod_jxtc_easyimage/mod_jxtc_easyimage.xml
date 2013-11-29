@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade">
+	<name>JoomlaXTC Easy Image Gallery</name>
+	<author>JoomlaXTC</author>
+	<creationDate>2013-07-19</creationDate>
+	<copyright>Copyright (C) 2012-2013 Monev Software LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.joomlaxtc.com</authorUrl>
+	<version>1.5.1</version>
+	<description>Easy Image Gallery module</description>
+	<files>
+		<filename module="mod_jxtc_easyimage">mod_jxtc_easyimage.php</filename>
+    <filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language/">
+		<language tag="en-GB">en-GB.mod_jxtc_easyimage.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/components/com_jxtceasyimage/fields/">
+			<fieldset name="EZIMGBASICOPTIONS">
+				<field name="folder" type="ezimgfolder" default="" label="Image Folder" description="Source folder for images." />
+				<field name="width" type="text" default="640" label="Slide Width" description="Slide width (in pixels)." />
+				<field name="height" type="text" default="400" label="Slide Height" description="Slide height (in pixels)." />
+				<field name="zoom" type="list" default="0" label="Thumbnail type" description="Select method to build thumbnails." >
+					<option value="0">Scale to fit</option>
+					<option value="1">Zoom to center</option>
+					<option value="2">Zoom to top</option>
+				</field>
+				<field name="li_shuffle" type="radio" class="btn-group" default="0" label="Shuffle" description="Randomize the slides order so every time a random slide will be play.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="li_goToSlideOnStart" type="text" default="1" label="Start image" description="Define the start image" />
+				<field name="skin" type="folderlist" directory="/components/com_jxtceasyimage/skins" exclude="_archive|images" hide_default="1" hide_none="1" default="Trend" label="Skin" description="Choose a skin theme for the Gallery." />
+			</fieldset>
+			<fieldset name="EZIMGDISPLAYOPTIONS">
+				<field type="xspacer" title="Animation" />
+				<field name="li_animation" type="list" default="Regular" label="Animation Type" description="Instructs the player in what sequence to play the slides.">
+					<option value="Regular">Regular</option>
+					<option value="Random">Random</option>
+					<option value="Regular-Custom">Regular-Custom</option>
+					<option value="Random-Custom">Random-Custom</option>
+					<option value="Regular-Exception">Regular-Exception</option>
+					<option value="Random-Exception">Random-Exception</option>
+				</field>
+				<field name="li_transitions" type="ezimgtransitions" default="" label="Transitions" description="List of transitions to be used. This option has effect only if the animation type is one of the following : Regular-Custom, Random-Custom, Regular-Exception, Random-Exception." />
+				<field name="li_auto_play" type="radio" class="btn-group" default="1" label="Auto Play" description="Auto start sliding when the page is loaded.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="li_delay" type="text" default="2000" label="Delay" description="How long each slide to be displayed/visible (in milliseconds)." />
+				<field name="li_trans_period" type="text" default="1000" label="Transition Duration" description="How long each transition lasts (in milliseconds)." />
+				<field name="li_vert_sections" type="text" default="15" label="Vertical Sections" description="How many columns a transition has (if blinds/squares transition is used)." />
+				<field name="li_sqr_sections_Y" type="text" default="5" label="Horizontal Sections" description="How many rows has a transition (if blinds/squares transition is used)." />
+				<field name="li_repeat" type="text" default="0" label="Repeat" description="With this option you can tell the slider how many times to repeat the slides. Use a value of 0 for infinite repeats." />
+
+				<field type="xspacer" title="Captions" />
+				<field name="li_caption" type="radio" class="btn-group" default="0" label="Enable Captions" description="Enable or disable image title and description captions.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="captiontype" type="list" default="titledesc" label="Caption Type" description="Choose the contents for caption area.">
+					<option value="titledesc">Title + Description</option>
+					<option value="filedesc">Filename + Description</option>
+					<option value="title">Title</option>
+					<option value="file">Filename</option>
+					<option value="desc">Description</option>
+				</field>
+				<field name="li_caption_position" type="list" default="Bottom" label="Caption Position" description="Position of caption in the slider.">
+					<option value="Top">Top</option>
+					<option value="Right">Right</option>
+					<option value="Bottom">Bottom</option>
+					<option value="Left">Left</option>
+				</field>
+				<field name="li_caption_animation" type="list" default="Fade" label="Caption Animation" description="the animation direction of the captions when they appear.">
+					<option value="Fade">Fade</option>
+					<option value="Slide-Down">Slide-Down</option>
+					<option value="Slide-Right">Slide-Right</option>
+					<option value="Slide-Up">Slide-Up</option>
+					<option value="Slide-Left">Slide-Left</option>
+				</field>
+				<field name="li_caption_show_time" type="text" default="300" label="Caption Show Time" description="Time before the captions are shown (in milliseconds)." />
+				<field name="li_caption_delay" type="text" default="100" label="Caption Delay" description="How much time before the next slide the caption to disappear (in milliseconds)." />
+				<field name="li_caption_size" type="text" default="60" label="Caption Size" description="Caption size (in pixels)." />
+				<field name="li_caption_opacity" type="ezimgopacity" default=".8" label="Caption Opacity" description="Caption background opacity. A decimal number between 0 (transparent) and 1 (opaque)." />
+				<field name="captionTSize" type="text" default="16" label="Title Font Size" description="Enter the font size for the caption's title (in pixels)." />
+				<field name="captionDSize" type="text" default="13" label="Description Font Size" description="Enter the font size for the caption's description text (in pixels)." />
+
+				<field type="xspacer" title="Links" />
+				<field name="li_active_links" type="radio" class="btn-group" default="1" label="Active Link URLs" description="To activate or disable link URLs. To be able to use Modal mode option below you need this turned on.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="li_modalMode" type="list" default="off" label="Modal Mode" description="When a link is included and the link points to YouTube, Vimeo, an image or QuickTime move, the slider will recognize what is the link type and will display the link in modal window. If you need video support you need to activate PrettyPhoto (supports also images).">
+					<option value="off">Off</option>
+					<option value="lightBox">LightBox</option>
+					<option value="prettyPhoto">PrettyPhoto</option>
+				</field>
+
+				<field type="xspacer" title="User Interface" />
+				<field name="li_timer" type="list" default="no" label="Timer Display" description="Select where to show the timer for next image display.">
+					<option value="no">None</option>
+					<option value="line_top">Top</option>
+					<option value="line_right">Right</option>
+					<option value="line_bottom">Bottom</option>
+					<option value="line_left">Left</option>
+				</field>
+				<field name="li_pauseOnMouseOver" type="radio" class="btn-group" default="1" label="Pause on Mouse Over" description="If the slider is in play mode and you move the mouse over the slider, this option pauses it.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="li_tooltip" type="list" default="no" label="Tooltip" description="When you hover the small slide buttons, a tooltip will popup. Choose the tooltip contents here.">
+					<option value="no">None</option>
+					<option value="text">Title</option>
+					<option value="text2">Filename</option>
+					<option value="image">Thumbnail</option>
+				</field>
+				<field name="li_tooltipSize" type="text" default="10" label="Tooltip Size" description="Defines the tooltip width size in percents of the slider from 0 to 100. If you use text tooltip and have more text than the width, the tooltip will expand upwards (this is changeable through the skins CSS)." />
+				<field name="li_buttons_show" type="radio" class="btn-group" default="1" label="Show Buttons" description="Show or hide all buttons.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="li_play_pause_show" type="radio" class="btn-group" default="1" label="Play/Pause Buttons" description="Show or hide Play/Pause buttons.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="li_next_prev_show" type="radio" class="btn-group" default="1" label="Next/Prev Buttons" description="Show or hide Next/Prev buttons.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="li_auto_hide" type="radio" class="btn-group" default="0" label="Autohide" description="Automatically hides the buttons after a certain amount of time if the mouse is not over the slider.">
+					<option value="0">Off</option>
+					<option value="1">On</option>
+				</field>
+				<field name="li_buttons_show_time" type="text" default="100" label="Button Show Time" description="How long to wait before showing the buttons if they are hidden (in milliseconds)." />
+				<field name="li_buttons_show_delay" type="text" default="300" label="Button Show Delay" description="How fast the buttons appear if they are hidden (in milliseconds)." />
+				<field name="li_buttons_hide_time" type="text" default="2000" label="Button Hide Time" description="How long to wait before hiding the buttons if the mouse is not over the slider (in milliseconds)." />
+				<field name="li_buttons_hide_delay" type="text" default="500" label="Button Hide Delay" description="How fast to hide the buttons if the mouse is not over the slider (in milliseconds)." />
+			</fieldset>
+			<fieldset name="EZIMGADVANCEDOPTIONS">
+				<field name="forcepng" type="radio" class="btn-group" default="1" label="Use PNG thumbnails" description="When enabled, all thumbnails will be store in PNG format with transparent background." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="thumbbkg" type="colorinput" default="FFFFFF" label="Thumbnail background color" description="Background color for thumbnails. Default: FFFFFF"/>
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

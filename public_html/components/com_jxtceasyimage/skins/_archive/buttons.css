@@ -1,0 +1,797 @@
+/* BonBon Buttons 1.1 by simurai.com
+
+1.1 Added unprefixed attributes, :focus style, <button> support
+1.0 Released
+
+Usage:
+	
+	Default button: 			    <a href="" class="button">Label</a>
+	More fancy with icon: 		<a href="" class="button orange glossy" data-icon="★">Label</a>
+	
+  Following additional class names are supported:
+
+	Type: abuton, bbutton
+	Color: 		white, black, orange, green, blue, pink
+	Shape: 		round, oval, brackets, skew, back, knife, shield, drop, morph
+	Size: 		xxxs, xxs, xs, s, l, xl, xxl, xxxl
+	Font: 		fbuda, fubuntu, fdroid, flobster
+
+*/
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Buda:light);
+
+
+
+.ibefore:before {
+	content: 		attr(isymbol); /* gets the icon value from the custom data attribute and puts it infront of the button label 	content:"▼"; /* |▼|↷|*/
+	background-color: #ddd;
+	color: #333;
+	padding: 2px 3px 1px 3px;
+	margin: 0px -5px 0px 5px;
+	border-radius:1em;
+	-moz-border-radius:1em;
+	-webkit-border-radius:1em;
+}
+
+
+.iafter:after {
+	content: 		attr(isymbol); /* gets the icon value from the custom data attribute and puts it infront of the button label 	content:"▼"; /* |▼|↷|*/
+	background-color: #ddd;
+	color: #333;
+	padding: 2px 3px 1px 3px;
+	margin: 0px -5px 0px 5px;
+	border-radius:1em;
+	-moz-border-radius:1em;
+	-webkit-border-radius:1em;
+}
+
+
+.li-banner .caption_background.bon {
+  position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	z-index: 1;
+	opacity:0.7!important;
+	filter:alpha(opacity=70)!important;
+}
+
+/* ============== Titles =============== */
+
+/* -------------- atitle --------------- */
+
+.atitle {
+	position: absolute;
+	display: block;
+	font-size: 14px;
+	font-family: 'Droid Sans', arial, serif;
+	padding: 0px;
+	margin: 0px;
+	color: #888;
+	/*text-shadow: 0px -1px 0px #222;*/
+							
+}
+
+
+/* ------------- Colors -----------------*/
+.atitle.cblack {
+	color: #000;
+}
+
+.atitle.cwhite {
+	color: #fff;
+}
+
+.atitle.ver1 {
+	background-color: #000;
+	padding: 0.1em 0.4em 0.2em 0.3em;
+	opacity: .8;
+}
+
+
+/* ============== Buttons ============== */
+
+.abutton, .bbutton {
+	position: absolute;
+	text-decoration: 		none;
+	display: block;
+	cursor: pointer;
+	font-size: 14px; /* Default font size */
+	font-family: 'Droid Sans', arial, serif;  /* Default font */
+}
+
+/* -------------- bbutton -------------- */
+.bbutton {
+
+/* text */
+	font-weight: 			bold;
+	text-shadow: 			rgba(255,255,255,.5) 0 1px 0;
+	-webkit-user-select: 	none;
+	-moz-user-select: 		none;
+	user-select: 			none;
+	
+	
+/* layout */
+	padding: 				.5em .6em .4em .6em;
+	margin: 				.2em;
+	display: 				block;
+	
+	-webkit-border-radius: 	8px;
+	-moz-border-radius: 	8px;
+	border-radius: 	8px;
+	
+/* effects */
+	border-top: 		1px solid rgba(255,255,255,0.8);
+	border-bottom: 		1px solid rgba(0,0,0,0.1);
+	
+	background-image: 	-webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url(noise.png);
+	background-image: 	-moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%), url(noise.png);
+	background-image: 	gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url(noise.png);
+
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: 	background .2s ease-in-out;
+	transition: 		background .2s ease-in-out;
+	
+/* color */
+	color: 				hsl(0, 0%, 40%) !important;
+	background-color: 	hsl(0, 0%, 75%);
+	
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+}
+
+
+
+
+
+/* -------------- abutton -------------- */
+.abutton {
+	border: none;
+	border-top: 1px solid #eee;	
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	letter-spacing: 0px;
+	font-weight: bold;
+	padding: 				0.5em 1em 0.5em 1em;
+	margin: 				0px;
+
+	color: #555;
+  background-color: #eeeeee;
+  background-image: -moz-linear-gradient(top, #eeeeee, #aaaaaa); 
+  background-image: -ms-linear-gradient(top, #eeeeee, #aaaaaa); 
+  background-image: -o-linear-gradient(top, #eeeeee, #aaaaaa); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#aaaaaa)); 
+  background-image: -webkit-linear-gradient(top, #eeeeee, #aaaaaa); 
+  background-image: linear-gradient(top, #eeeeee, #aaaaaa);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#aaaaaa'); 
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+
+	
+}
+
+.abutton:hover {
+  background-color: #dddddd;
+  background-image: -moz-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -ms-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -o-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#aaaaaa)); 
+  background-image: -webkit-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: linear-gradient(top, #dddddd, #aaaaaa);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dddddd', EndColorStr='#aaaaaa'); 
+
+	color: #333;
+	border-top: solid 1px #eee;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+}
+
+.abutton:active {
+	color: #222;
+	border-top: solid 1px #eee;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	margin: 				0.1em 0.1em 0.1em 0.1em;
+
+  background-color: #dddddd;
+  background-image: -moz-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -ms-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -o-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#aaaaaa)); 
+  background-image: -webkit-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: linear-gradient(top, #dddddd, #aaaaaa);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dddddd', EndColorStr='#aaaaaa'); 
+}
+
+/* cbutton colors */
+
+.abutton.cwhite {
+	color: #999;
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff, #ddd); 
+  background-image: -ms-linear-gradient(top, #fff, #ddd); 
+  background-image: -o-linear-gradient(top, #fff, #ddd); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd)); 
+  background-image: -webkit-linear-gradient(top, #fff, #ddd); 
+  background-image: linear-gradient(top, #fff, #ddd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#dddddd'); 
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.abutton.cwhite:hover {
+	color: #555;
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff, #eee); 
+  background-image: -ms-linear-gradient(top, #fff, #eee); 
+  background-image: -o-linear-gradient(top, #fff, #eee); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); 
+  background-image: -webkit-linear-gradient(top, #fff, #eee); 
+  background-image: linear-gradient(top, #fff, #eee);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eeeeee'); 
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.abutton.cblack {
+	border-top: 1px solid #555;
+	color: #ddd;
+  background-color: #111;
+  background-image: -moz-linear-gradient(top, #333, #000); 
+  background-image: -ms-linear-gradient(top, #333, #000); 
+  background-image: -o-linear-gradient(top, #333, #000); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#000)); 
+  background-image: -webkit-linear-gradient(top, #333, #000); 
+  background-image: linear-gradient(top, #333, #000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#000000'); 
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+}
+
+.abutton.cblack:hover {
+	color: #ddd;
+  background-image: -moz-linear-gradient(top, #444, #111); 
+  background-image: -ms-linear-gradient(top, #444, #111); 
+  background-image: -o-linear-gradient(top, #444, #111); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#111)); 
+  background-image: -webkit-linear-gradient(top, #444, #111); 
+  background-image: linear-gradient(top, #444, #111);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#444444', EndColorStr='#111111'); 
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+}
+
+.abutton.corange {
+	border-top: 1px solid #ffbc76;
+	color: #fff;
+  background-color: #ff4500;
+  background-image: -moz-linear-gradient(top, #ff9f37, #ec5e00); 
+  background-image: -ms-linear-gradient(top, #ff9f37, #ec5e00); 
+  background-image: -o-linear-gradient(top, #ff9f37, #ec5e00); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9f37), to(#ec5e00)); 
+  background-image: -webkit-linear-gradient(top, #ff9f37, #ec5e00); 
+  background-image: linear-gradient(top, #ff9f37, #ec5e00);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff9f37', EndColorStr='#ec5e00'); 
+	text-shadow: 0 -1px 0 rgba(200, 200, 200, .8);
+}
+
+.abutton.corange:hover {
+	color: #fff;
+  background-image: -moz-linear-gradient(top, #ff8400, #d25400); 
+  background-image: -ms-linear-gradient(top, #ff8400, #d25400); 
+  background-image: -o-linear-gradient(top, #ff8400, #d25400); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8400), to(#d25400)); 
+  background-image: -webkit-linear-gradient(top, #ff8400, #d25400); 
+  background-image: linear-gradient(top, #ff8400, #d25400);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff8400', EndColorStr='#d25400'); 
+	text-shadow: 0 -1px 0 rgba(100, 100, 100, 0.8);
+}
+
+.abutton.cgreen {
+	border-top: 1px solid #b2ff58;
+	color: #fff;
+  background-color: #66c800;
+  background-image: -moz-linear-gradient(top, #8aff00, #4ca001); 
+  background-image: -ms-linear-gradient(top, #8aff00, #4ca001); 
+  background-image: -o-linear-gradient(top, #8aff00, #4ca001); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8aff00), to(#4ca001)); 
+  background-image: -webkit-linear-gradient(top, #8aff00, #4ca001); 
+  background-image: linear-gradient(top, #8aff00, #4ca001);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#8aff00', EndColorStr='#4ca001'); 
+	text-shadow: 0 -1px 0 rgba(200, 200, 200, .8);
+}
+
+.abutton.cgreen:hover {
+	color: #fff;
+  background-image: -moz-linear-gradient(top, #71d002, #387601); 
+  background-image: -ms-linear-gradient(top, #71d002, #387601); 
+  background-image: -o-linear-gradient(top, #71d002, #387601); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#71d002), to(#387601)); 
+  background-image: -webkit-linear-gradient(top, #71d002, #387601); 
+  background-image: linear-gradient(top, #71d002, #387601);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#71d002', EndColorStr='#387601'); 
+	text-shadow: 0 -1px 0 rgba(100, 100, 100, 0.8);
+}
+
+
+.abutton.cblue {
+	border-top: 1px solid #7fc7ff;
+	color: #fff;
+  background-color: #0c7cdb;
+  background-image: -moz-linear-gradient(top, #1e9dff, #0065c3); 
+  background-image: -ms-linear-gradient(top, #1e9dff, #0065c3); 
+  background-image: -o-linear-gradient(top, #1e9dff, #0065c3); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e9dff), to(#0065c3)); 
+  background-image: -webkit-linear-gradient(top, #1e9dff, #0065c3); 
+  background-image: linear-gradient(top, #1e9dff, #0065c3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#1e9dff', EndColorStr='#0065c3'); 
+	text-shadow: 0 -1px 0 rgba(100, 100, 100, .8);
+}
+
+.abutton.cblue:hover {
+	color: #fff;
+  background-image: -moz-linear-gradient(top, #0090ff, #0153a0); 
+  background-image: -ms-linear-gradient(top, #0090ff, #0153a0); 
+  background-image: -o-linear-gradient(top, #0090ff, #0153a0); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0090ff), to(#0153a0)); 
+  background-image: -webkit-linear-gradient(top, #0090ff, #0153a0); 
+  background-image: linear-gradient(top, #0090ff, #0153a0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#0090ff', EndColorStr='#0153a0'); 
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+
+.abutton.cpink {
+	border-top: 1px solid #ff91a6;
+	color: #fff;
+  background-color: #ff466f;
+  background-image: -moz-linear-gradient(top, #ff6f8a, #ff2659); 
+  background-image: -ms-linear-gradient(top, #ff6f8a, #ff2659); 
+  background-image: -o-linear-gradient(top, #ff6f8a, #ff2659); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff6f8a), to(#ff2659)); 
+  background-image: -webkit-linear-gradient(top, #ff6f8a, #ff2659); 
+  background-image: linear-gradient(top, #ff6f8a, #ff2659);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff6f8a', EndColorStr='#ff2659'); 
+	text-shadow: 0 -1px 0 rgba(100, 100, 100, .8);
+}
+
+.abutton.cpink:hover {
+	color: #fff;
+  background-image: -moz-linear-gradient(top, #ff4d73, #f1003e); 
+  background-image: -ms-linear-gradient(top, #ff4d73, #f1003e); 
+  background-image: -o-linear-gradient(top, #ff4d73, #f1003e); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff4d73), to(#f1003e)); 
+  background-image: -webkit-linear-gradient(top, #ff4d73, #f1003e); 
+  background-image: linear-gradient(top, #ff4d73, #f1003e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff4d73', EndColorStr='#f1003e'); 
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+/*===============================================================================================*/
+
+
+/* -------------- colours -------------- */
+
+.bbutton.corange {
+	color: 				hsl(39, 100%, 30%) !important;
+	background-color: 	hsl(39, 100%, 50%);
+
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(39, 100%, 40%) 0 .1em 3px, hsl(39, 100%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(39, 100%, 40%) 0 .1em 3px, hsl(39, 100%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(39, 100%, 40%) 0 .1em 3px, hsl(39, 100%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+}
+.bbutton.corange:hover { 	background-color: hsl(39, 100%, 65%); }
+
+
+.bbutton.cblue {
+	color: 				hsl(208, 50%, 40%) !important;
+	background-color: 	hsl(208, 100%, 75%);
+	
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px;	/* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px;	/* drop shadow */
+	box-shadow: 		inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(208, 50%, 55%) 0 .1em 3px, hsl(208, 50%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px;	/* drop shadow */
+}
+.bbutton.cblue:hover { 	background-color: hsl(208, 100%, 83%); }
+
+.bbutton.cgreen {
+	color: 				hsl(88, 70%, 30%) !important;
+	background-color: 	hsl(88, 70%, 60%);
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(88, 70%, 40%) 0 .1em 3px, hsl(88, 70%, 30%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+}
+.bbutton.cgreen:hover { 	background-color: hsl(88, 70%, 75%); }
+
+.bbutton.cpink {
+	color: 				hsl(340, 100%, 30%) !important;
+	background-color: 	hsl(340, 100%, 75%);
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(340, 70%, 50%) 0 .1em 3px, hsl(340, 80%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(340, 70%, 50%) 0 .1em 3px, hsl(340, 80%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow: 		inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+							hsl(340, 70%, 50%) 0 .1em 3px, hsl(340, 80%, 40%) 0 .3em 1px, /* color border */
+							rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+}
+.bbutton.cpink:hover { 	background-color: hsl(340, 100%, 83%); }
+
+
+
+.bbutton.transparent {
+	color: 	rgba(0,0,0,0.5) !important;
+}
+.bbutton.transparent, .bbutton.transparent:hover, .bbutton.transparent:active {
+	background-color: transparent;
+	background-image: none;
+}
+.bbutton.transparent:hover {
+	opacity: .9;
+}
+
+
+
+/* -------------- States -------------- */
+
+.bbutton:hover {
+	background-color: 	hsl(0, 0%, 83%);
+}
+
+
+
+.bbutton:active {
+	background-image: 	-webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url(noise.png);
+	background-image: 	-moz-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url(noise.png);
+	background-image: 	gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url(noise.png);
+
+	-webkit-box-shadow: inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
+							rgba(0,0,0,0.4) 0 .1em 1px, /* border */
+							rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
+							rgba(0,0,0,0.4) 0 .1em 1px, /* border */
+							rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
+	box-shadow: 		inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
+							rgba(0,0,0,0.4) 0 .1em 1px, /* border */
+							rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
+
+	-webkit-transform: 	translateY(.2em);
+	-moz-transform: 	translateY(.2em);
+	transform: 			translateY(.2em);
+}
+
+.bbutton:focus {
+	outline: none;
+	color: rgba(254,255,255,0.9) !important;
+	text-shadow: rgba(0,0,0,0.2) 0 1px 2px;
+}
+
+
+/* -------------- Fonts -------------- */
+
+.fbuda {
+		font-family: 'Buda', arial, serif;
+}
+
+.fubuntu {
+		font-family: 'Ubuntu', arial, serif;;
+}
+
+.fdroid {
+		font-family: 'Droid Sans', arial, serif;
+}
+
+.flobster {
+		font-family: 'Lobster', arial, serif;
+}
+
+
+/* -------------- Sizes -------------- */
+
+.xxxs { font-size: 8px; }
+.xxs { font-size: 10px; }
+.xs { font-size: 11px; }
+.s { font-size: 12px; }
+.l { font-size: 16px; }
+.xl { font-size: 18px; }
+.xxl { font-size: 22px; }
+.xxxl { font-size: 26px; }
+
+
+/*--------------- Opacity -------------*/
+.opacity10 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";/* IE 8 */
+  filter: alpha(opacity=10);/* IE 5-7 */
+  -moz-opacity: 0.1;/* Netscape */
+  -khtml-opacity: 0.1;/* Safari 1.x */
+  opacity: 0.1;  /* Good browsers */
+}
+
+.opacity20 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";/* IE 8 */
+  filter: alpha(opacity=20);/* IE 5-7 */
+  -moz-opacity: 0.2;/* Netscape */
+  -khtml-opacity: 0.2;/* Safari 1.x */
+  opacity: 0.2;  /* Good browsers */
+}
+
+.opacity30 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";/* IE 8 */
+  filter: alpha(opacity=30);/* IE 5-7 */
+  -moz-opacity: 0.3;/* Netscape */
+  -khtml-opacity: 0.3;/* Safari 1.x */
+  opacity: 0.3;  /* Good browsers */
+}
+
+.opacity40 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";/* IE 8 */
+  filter: alpha(opacity=40);/* IE 5-7 */
+  -moz-opacity: 0.4;/* Netscape */
+  -khtml-opacity: 0.4;/* Safari 1.x */
+  opacity: 0.3;  /* Good browsers */
+}
+
+.opacity50 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";/* IE 8 */
+  filter: alpha(opacity=50);/* IE 5-7 */
+  -moz-opacity: 0.5;/* Netscape */
+  -khtml-opacity: 0.5;/* Safari 1.x */
+  opacity: 0.3;  /* Good browsers */
+}
+
+.opacity60 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";/* IE 8 */
+  filter: alpha(opacity=60);/* IE 5-7 */
+  -moz-opacity: 0.6;/* Netscape */
+  -khtml-opacity: 0.6;/* Safari 1.x */
+  opacity: 0.6;  /* Good browsers */
+}
+
+.opacity70 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";/* IE 8 */
+  filter: alpha(opacity=70);/* IE 5-7 */
+  -moz-opacity: 0.7;/* Netscape */
+  -khtml-opacity: 0.7;/* Safari 1.x */
+  opacity: 0.7;  /* Good browsers */
+}
+
+.opacity80 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";/* IE 8 */
+  filter: alpha(opacity=80);/* IE 5-7 */
+  -moz-opacity: 0.8;/* Netscape */
+  -khtml-opacity: 0.8;/* Safari 1.x */
+  opacity: 0.8;  /* Good browsers */
+}
+
+.opacity90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";/* IE 8 */
+  filter: alpha(opacity=90);/* IE 5-7 */
+  -moz-opacity: 0.9;/* Netscape */
+  -khtml-opacity: 0.9;/* Safari 1.x */
+  opacity: 0.9;  /* Good browsers */
+}
+
+.opacity100 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";/* IE 8 */
+  filter: alpha(opacity=100);/* IE 5-7 */
+  -moz-opacity: 1;/* Netscape */
+  -khtml-opacity: 1;/* Safari 1.x */
+  opacity: 1;  /* Good browsers */
+}
+
+/* -------------- Shapes -------------- */
+
+/* round */
+.sround, .sround.glossy:after, .sround.glass:after { 
+	border-top: none; 
+	-webkit-border-radius: 	1em; 
+	-moz-border-radius: 	1em; 
+	border-radius: 			1em; 
+}
+
+/* oval */
+.soval {
+	border-top: 			none; 
+	padding-left: 			.8em;
+	padding-right: 			.8em;
+	-webkit-border-radius: 	5em / 2em; 
+	-moz-border-radius: 	5em / 2em; 
+	border-radius: 			5em / 2em; 
+}
+
+
+/* brackets */
+.sbrackets { 
+	border-top: 			none; 
+	-webkit-border-radius: 	.5em / 1em;
+	-moz-border-radius: 	.5em / 1em;
+	border-radius: 			.5em / 1em;
+}
+
+/* skew */
+.sskew { 
+	border-top: 			none; 
+	padding-right: 			1.2em;
+	padding-left: 			0.8em;	
+	-webkit-border-radius: 	5em 1em / 5em 1em;  
+	-moz-border-radius: 	5em 1em / 5em 1em;  
+	border-radius: 			5em 1em / 5em 1em;  
+}
+
+
+/* back */
+.sback { 
+	border-top-color: 		rgba(255,255,255,0.5);
+	-webkit-border-radius: 	1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+	-moz-border-radius: 	1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+	border-radius: 			1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+}
+
+/* knife */
+.sknife { 						
+	padding-left: 1.5em;
+	-webkit-border-radius: 	.2em .5em .5em 8em / .2em .5em .5em 5em; 
+	-moz-border-radius: 	.2em .5em .5em 8em / .2em .5em .5em 5em; 
+	border-radius: 			.2em .5em .5em 8em / .2em .5em .5em 5em; 
+}
+
+/* shield */
+.sshield { 
+	-webkit-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em; 
+	-moz-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	border-radius: 			.4em .4em 2em 2em / .4em .4em 3em 3em;
+	padding-left: 	.8em;
+	padding-right: 	.8em;
+}
+
+
+/* drop */
+.sdrop {
+	border-top: none;
+	-webkit-border-radius: 	2em 5em  2em .6em / 2em 4em 2em .6em; 
+	-moz-border-radius: 	2em 5em  2em .6em / 2em 4em 2em .6em; 
+	border-radius: 			2em 5em  2em .6em / 2em 4em 2em .6em; 
+}
+
+/* morph */
+.smorph {
+	border-top: none;
+	-webkit-border-radius: 	5em / 2em;
+	-moz-border-radius: 	5em / 2em;
+	border-radius: 			5em / 2em;
+	-webkit-transition: 	-webkit-border-radius .3s ease-in-out;
+	-moz-transition: 		-moz-border-radius .3s ease-in-out;
+	transition: 			-moz-border-radius .3s ease-in-out;
+}
+.morph:hover { 
+	-webkit-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	-moz-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	border-radius: 			.4em .4em 2em 2em / .4em .4em 3em 3em;
+}
+.morph:active { 
+	-webkit-border-radius: 	.3em;
+	-moz-border-radius: 	.3em;
+	border-radius: 			.3em;
+}
+.morph:after { 
+	display: none;
+}
+
+
+/*-------- Shadows ---------- */
+.tshadow1 {
+	 text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+							 
+}
+							 
+.bshadowb {					
+  -moz-box-shadow: 0 1px 0 #999, 
+               0 2px 0 #898989,
+               0 3px 0 #777,
+               0 4px 0 #898989,
+               0 5px 0 #555,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 1px 0 #999, 
+               0 2px 0 #898989,
+               0 3px 0 #777,
+               0 4px 0 #898989,
+               0 5px 0 #555,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  box-shadow:  0 1px 0 #999, 
+               0 2px 0 #898989,
+               0 3px 0 #777,
+               0 4px 0 #898989,
+               0 5px 0 #555,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.shadowb:active {
+/*	 text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);*/
+							 
+							
+  -moz-box-shadow: 0 0px 0 #999; 
+              
+  -webkit-box-shadow: 0 0px 0 #999;
+  box-shadow:  0 0px 0 #999;
+}
+
+
+
+/* Some ugly hacks for FF. 
+Thanks to David Hund for some help - http://valuedstandards.com/static/test/buttons/ */
+@-moz-document url-prefix() {
+	.knife { padding-left: 2em; }
+}
+
+
+
+

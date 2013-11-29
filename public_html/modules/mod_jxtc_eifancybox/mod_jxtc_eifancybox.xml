@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade">
+	<name>JoomlaXTC Easy Image Gallery Fancybox</name>
+	<author>JoomlaXTC</author>
+	<creationDate>2013-01-09</creationDate>
+	<copyright>Copyright (C) 2012-2013-2013 Monev Software LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.joomlaxtc.com</authorUrl>
+	<version>1.0.0</version>
+	<description>JoomlaXTC Easy Image Gallery Fancybox module</description>
+	<files>
+		<filename module="mod_jxtc_eifancybox">mod_jxtc_eifancybox.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<languages folder="language/">
+		<language tag="en-GB">en-GB.mod_jxtc_eifancybox.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/components/com_jxtceasyimage/fields/">
+			<fieldset name="basic">
+				<field name="folder" type="ezimgfolder" default="" label="Image Folder" description="Source folder for images." />
+				<field name="thumbw" type="text" default="120" label="Thumbnail Width" description="Set the width of thumbnails (in pixels). Default: 120" />
+				<field name="thumbh" type="text" default="90" label="Thumbnail Height" description="Set the height of thumbnails (in pixels). Default: 90" />
+				<field name="zoom" type="list" default="0" label="Thumbnail type" description="Select method to build thumbnails." >
+					<option value="0">Scale to fit</option>
+					<option value="1">Zoom to center</option>
+					<option value="2">Zoom to top</option>
+				</field>
+				<field name="single" type="radio" class="btn-group" default="1" label="Single" description="When enabled, only the first thumbnail will be shown in the content item. Disable to show all thumbnails." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="padding" type="text" default="10" label="Padding" description="Space between image wrapper and content. Default: 10" />
+				<field name="margin" type="text" default="20" label="Margin" description="Space between viewport and image wrapper. Default: 20" />
+				<field name="opacity" type="radio" class="btn-group" default="0" label="Opacity" description="When enabled, transparency of content is changed for elastic transitions." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="cyclic" type="radio" class="btn-group" default="0" label="Cyclic" description="When true, galleries will be cyclic, allowing you to keep pressing next/back.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="autoScale" type="radio" class="btn-group" default="1" label="Autoscale" description="If enabled, image is scaled to fit in viewport.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="centerOnScroll" type="radio" class="btn-group" default="1" label="Center on scroll" description="When enabled, image is centered while scrolling page.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="hideOnOverlayClick" type="radio" class="btn-group" default="1" label="Hide on overlay click" description="Toggle if clicking the overlay should close image.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="hideOnContentClick" type="radio" class="btn-group" default="0" label="Hide on content click" description="Toggle if clicking the content should close image.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="overlayShow" type="radio" class="btn-group" default="1" label="Enable overlay" description="Toggle overlay shadow.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="overlayOpacity" type="text" default="0.7" label="Overlay opacity" description="Opacity of the overlay (from 0 to 1; default: 0.7)" />
+				<field name="overlayColor" type="colorinput" default="000000" label="Overlay color" description="Color of the overlay. Default: 000000"/>
+				<field name="titleShow" type="radio" class="btn-group" default="1" label="Show info area" description="Toggle Title/description display area.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="title" type="list" default="1" label="Show title" description="Toggle title text (if available).">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+					<option value="2">File name</option>
+				</field>
+				<field name="description" type="radio" class="btn-group" default="1" label="Show description" description="Toggle description text (if available).">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="numbers" type="radio" class="btn-group" default="0" label="Numbering" description="Toggle image numbering on titles.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="titlePosition" type="list" default="inside" label="Title position" description="The position of title.">
+					<option value="outside">Outside</option>
+					<option value="inside">Inside</option>
+					<option value="over">Over</option>
+				</field>
+				<field name="transitionIn" type="list" default="elastic" label="Start transition" description="The initial transition type.">
+					<option value="none">None</option>
+					<option value="elastic">Elastic</option>
+					<option value="fade">Fade</option>
+				</field>
+				<field name="transitionOut" type="list" default="elastic" label="Exit transition" description="The final transition type.">
+					<option value="none">None</option>
+					<option value="elastic">Elastic</option>
+					<option value="fade">Fade</option>
+				</field>
+				<field name="speedIn" type="text" default="300" label="Start speed" description="Speed of initial transition (in milliseconds). Default: 300"/>
+				<field name="speedOut" type="text" default="300" label="Exit speed" description="Speed of final transition (in milliseconds). Default: 300"/>
+				<field name="changeSpeed" type="text" default="300" label="Change speed" description="Speed of image change (in milliseconds). Default: 300"/>
+				<field name="changeFade" type="text" default="300" label="Fade speed" description="Speed of image fade (in milliseconds). Default: 300"/>
+				<field name="showCloseButton" type="radio" class="btn-group" default="1" label="Show Close button" description="Enable or disable close button.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showNavArrows" type="radio" class="btn-group" default="1" label="Show navigation buttons" description="Enable or disable navigation buttons.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="forcepng" type="radio" class="btn-group" default="1" label="Use PNG thumbnails" description="When enabled, all thumbnails will be store in PNG format with transparent background." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="thumbbkg" type="colorinput" default="FFFFFF" label="Thumbnail background color" description="Background color for thumbnails. Default: FFFFFF"/>
+				<field name="mousewheel" type="radio" class="btn-group" default="0" label="Mouse wheel navigation" description="Enable or disable mouse wheel navigation.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="css" type="radio" class="btn-group" default="1" label="CSS load" description="Load CSS. Disable if you want to use CSS from some other place.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="layout" type="modulelayout" default="black" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

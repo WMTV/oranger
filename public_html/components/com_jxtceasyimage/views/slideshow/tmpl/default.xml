@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Image Slideshow">
+		<message>Slideshow of images in a folder.</message>
+	</layout>
+		<fields name="params" addfieldpath="/components/com_jxtceasyimage/fields/">
+			<fieldset name="EZIMGBASICOPTIONS">
+				<field name="folder" type="ezimgfolder" default="" label="Image Folder" description="Source folder for images." />
+				<field name="width" type="text" default="400" label="Slide width" description="Slide image width (in pixels)." />
+				<field name="height" type="text" default="300" label="Slide height" description="Slide image height (in pixels)." />
+			</fieldset>
+			<fieldset name="EZIMGDISPLAYOPTIONS">
+				<field name="layout" type="list" default="black" label="Layout" description="Select a display layout." >
+					<option value="black">Black</option>
+					<option value="white">White</option>
+				</field>
+				<field name="delay" type="text" default="4000" label="Slide delay" description="Delay between slide transitions (in milliseconds)." />
+				<field name="effect" type="list" default="overlap" label="Transition type" description="Choose a transition effect to change slide images.">
+					<option value="overlap">Overlap</option>
+					<option value="nooverlap">No Overlap</option>
+					<option value="lighflash">Light Flash</option>
+					<option value="darkflash">Dark Flash</option>
+					<option value="fold">Fold</option>
+					<option value="kenburns">Ken Burns</option>
+					<option value="push">Push</option>
+				</field>
+				<field name="transduration" type="text" default="1000" label="Transition duration" description="Duration of slide transition effect (in milliseconds)." />
+				<field name="enablelinks" type="list" default="1" label="Enable links?" description="Enable image links?.">
+					<option value="0">No</option>
+					<option value="1">Image link URL (if present)</option>
+					<option value="2">Full image Pop-up</option>
+				</field>
+				<field name="loop" type="radio" class="btn-group" default="1" label="Enable loop?" description="Enable slideshow to loop.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="paused" type="radio" class="btn-group" default="0" label="Start in pause mode?" description="Start the slideshow in pause mode.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="zoom" type="list" default="0" label="Thumbnail type" description="Select method to build thumbnails." >
+					<option value="0">Scale to fit</option>
+					<option value="1">Zoom to center</option>
+					<option value="2">Zoom to top</option>
+				</field>
+
+				<field type="xspacer" title="Thumbnail Options" />
+
+				<field name="thumbnails" type="radio" class="btn-group" default="1" label="Enable thumbnails?" description="Enable thumbnails.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="twidth" type="text" default="40" label="Thumbnail width" description="Thumbnail width (in pixels)." />
+				<field name="theight" type="text" default="30" label="Thumbnail height" description="Thumbnail height (in pixels)." />
+
+				<field type="xspacer" title="Caption Options" />
+
+				<field name="captiontype" type="list" default="titledesc" label="Caption Type" description="Choose the contents for caption area.">
+					<option value="none">None</option>
+					<option value="titledesc">Title + Description</option>
+					<option value="filedesc">Filename + Description</option>
+					<option value="title">Title</option>
+					<option value="file">Filename</option>
+					<option value="desc">Description</option>
+				</field>
+				<field name="captionsize" type="text" default="40" label="Caption height" description="Caption area height (in pixels)." />
+				<field name="captionopacity" type="ezimgopacity" default=".8" label="Caption Opacity" description="Caption background opacity. A decimal number between 0 (transparent) and 1 (opaque)." />
+				<field name="captionTSize" type="text" default="16" label="Title Font Size" description="Enter the font size for the caption's title (in pixels)." />
+				<field name="captionDSize" type="text" default="13" label="Description Font Size" description="Enter the font size for the caption's description text (in pixels)." />
+				<field name="captiondelay" type="text" default="1000" label="Caption delay" description="Delay for Caption display (in milliseconds)." />
+			</fieldset>
+			<fieldset name="EZIMGADVANCEDOPTIONS">
+				<field name="forcepng" type="radio" class="btn-group" default="1" label="Use PNG thumbnails" description="When enabled, all thumbnails will be store in PNG format with transparent background." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="thumbbkg" type="colorinput" default="FFFFFF" label="Thumbnail background color" description="Background color for thumbnails. Default: FFFFFF"/>
+			</fieldset>
+		</fields>
+</metadata>
