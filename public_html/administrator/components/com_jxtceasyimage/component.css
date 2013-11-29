@@ -1,0 +1,234 @@
+/*
+#easyimage fieldset, #easyimage fieldset {
+	background-color: #F4F4F4;
+	border: 1px solid #CCCCCC;
+	-moz-border-radius:  5px; -webkit-border-radius: 5px; border-radius: 5px;
+	display:block;
+}
+*/
+/*
+#easyimage .folderwrap {
+	vertical-align:top;
+	width:auto;
+	padding-right:8px;
+}
+#easyimage .imagewrap {
+	vertical-align:top;
+	width:100%;
+}
+*/
+
+/* Toolbar */
+#easyimage .toolbar {
+	width:100%;
+	margin-bottom:1em;
+}
+#easyimage .toolbar td {
+	vertical-align:top;
+}
+#easyimage .toolbar input {
+	margin-bottom:0px;
+}
+#easyimage .toolbar .chzn-single {
+	height:auto;
+}
+#easyimage .toolbar .last {
+	text-align:right;
+}
+
+
+/* Folders */
+#easyimage .openfolder td , #easyimage .closedfolder td {
+	height:24px;
+	line-height:24px;
+	font-size:15px;
+	color: #146295;
+	cursor:pointer;
+	vertical-align:middle;
+	margin:0px;
+	border:none;
+}
+#easyimage .openfolder td {
+	border-bottom:1px solid #d0d0d0;
+	border-top:1px solid #a0a0a0;
+	background-color:#c0c0c0;
+}
+#easyimage .closedfolder td {
+	border-top:1px solid #f0f0f0;
+	border-bottom:1px solid #cccccc;
+	background-color:#e0e0e0;
+}
+
+#easyimage .openfolder .folder, #easyimage .closedfolder .folder  {
+	padding-right:20px;
+	width:100%;
+}
+#easyimage .icons {
+	white-space:nowrap;
+	padding:0 4px 0 0;
+	vertical-align:middle;
+}
+#easyimage .icon {
+	width:20px;
+	display:block;
+	float:right;
+	padding:0px;
+	margin:0px;
+	border:none;
+}
+#easyimage .icon span {
+	display:block;
+}
+#easyimage .icon img {
+	border:none;
+	padding:2px;
+	margin:0px;
+}
+
+/* thumbnails view */
+
+#easyimage ul {
+	float:left;
+	margin:0px;
+}
+#easyimage li {
+	margin:0px;
+	padding:0px;
+	border:0px;
+	list-style:none;	
+}
+#easyimage .enabled, #easyimage .disabled {
+	overflow:hidden;
+	margin:4px;
+	padding:8px;
+	border:1px solid #cccccc;
+	-moz-border-radius:  5px; -webkit-border-radius: 5px; border-radius: 5px;
+	text-align:center;
+	float:left;
+	cursor:pointer;
+}
+#easyimage .disabled {
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	border:1px solid #dcdcdc;
+}
+#easyimage .over {
+	background-color:#ddd;
+}
+
+#easyimage li img {
+	padding:0;
+	margin:0;
+	border:none;
+	float:none;
+}
+#easyimage li a {
+	padding:0;
+	margin:0;
+	font-weight:normal;
+}
+#easyimage li .size, #easyimage li .name {
+	white-space:nowrap;
+	font-style:italic;
+	overflow:hidden;
+	font-family:sans-serif;
+	font-size:12px;
+}
+
+/* Popup forms */
+#easyimage #imagePopup {
+	color:#444444;
+}
+#easyimage #folderPopup {
+	color:#444444;
+}
+#easyimage #imagePopup .inputbox, #easyimage #folderPopup .inputbox {
+	width:100%;
+}
+
+/* Detail View */
+#easyimage .table tr {
+	white-space:nowrap;
+}
+#easyimage .table td {
+	vertical-align:middle;
+}
+
+
+/*
+.actionhdr td {
+	height:30px;
+	font-size: 13px;
+	line-height:30px;
+	font-weight: bold;
+	color: #146295;
+}
+.actionhdr img {
+	padding:0px 4px 0px 4px;
+}
+*/
+.actiontable .thumbcell {
+	padding:8px 16px 0 0;
+}
+.actiontable .formcell {
+	padding:8px 8px 0 16px;
+}
+
+#easyimage .thumbcell {
+	width:1%;
+	border-right:1px solid #eeeeee;
+}
+#easyimage .thumbcell img {
+	padding:8px;
+	border:1px solid #eeeeee;
+}
+
+#easyimage #title, #easyimage #description, #easyimage #url, #easyimage #filename  {
+	width:100%;
+}
+
+/*
+#easyimage label {
+	margin-top:3px;
+	padding-left:5px;
+	min-width:40px !important;
+	width:auto !important;
+	clear:none !important;
+}
+*/
+
+/* toolbar */
+/*
+.icon-32-grid {
+  background: url('support/images/grid32.png') 0 0 no-repeat;
+}
+.icon-32-list {
+  background: url('support/images/list32.png') 0 0 no-repeat;
+}
+.icon-32-small {
+  background: url('support/images/small32.png') 0 0 no-repeat;
+}
+.icon-32-medium {
+  background: url('support/images/medium32.png') 0 0 no-repeat;
+}
+.icon-32-large {
+  background: url('support/images/large32.png') 0 0 no-repeat;
+}
+
+.icon-32-publish {
+  background: url('support/images/enable32.png') 0 0 no-repeat !important;
+}
+.icon-32-unpublish {
+  background: url('support/images/disable32.png') 0 0 no-repeat !important;
+}
+.icon-32-delete {
+  background: url('support/images/remove32.png') 0 0 no-repeat !important;
+}
+.icon-32-options {
+  background: url('support/images/options32.png') 0 0 no-repeat !important;
+}
+*/
+/* J toolbar */
+.icon-grid:before {
+	content: "\59";
+}

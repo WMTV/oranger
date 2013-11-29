@@ -1,0 +1,1685 @@
+/* BonBon Buttons 1.1 by simurai.com
+
+1.1 Added unprefixed attributes, :focus style, <button> support
+1.0 Released
+
+Usage:
+	
+	Default button: 			    <a href="" class="button">Label</a>
+	More fancy with icon: 		<a href="" class="button orange glossy" data-icon="★">Label</a>
+	
+  Following additional class names are supported:
+
+	Type: abuton, atitle
+	Color: 		white, black, orange, green, blue, pink
+	Shape: 		round, oval, brackets, skew, back, knife, shield, drop, morph
+	Size: 		xxxs, xxs, xs, s, l, xl, xxl, xxxl
+	Font: 		fbuda, fubuntu, fdroid, flobster
+
+*/
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Buda:light);
+
+/* Uncomment to activate the background */
+/*
+.li-banner .caption_Custom .caption_background {
+  position: absolute!important;;
+	top:0px!important;;
+	left: 0px!important;;
+	width: 100%!important;;
+	height: 100%!important;;
+	background-color: #333!important;;
+	z-index: 1!important;;
+	opacity:0.7!important;
+	filter:alpha(opacity=70)!important;
+}
+*/
+
+/* ============== Text Effects =============== */
+
+.li-banner .text-emboss-up-dark {
+		text-shadow: 0px -1px 0px #555;
+}
+
+.li-banner .text-emboss-down-dark {
+		text-shadow: 0px 1px 0px #222;
+}
+
+.li-banner .text-emboss-up-light {
+		text-shadow: 0px -1px 0px #ddd;
+}
+
+.li-banner .text-emboss-down-light {
+		text-shadow: 0px 1px 0px #ddd;
+}
+
+.li-banner .bbutton {
+width: 100px;
+   height: 100px;
+   margin: 10px;
+   padding: 0;
+   border: 1px solid rgba(0,0,0,0.5);
+   border-radius: 10px 10px 2px 2px;
+   background: rgba(0,0,0,0.25);
+   box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+}
+
+/* -------------- abutton -------------- */
+.li-banner .abutton {
+	text-decoration: 		none;
+	cursor: pointer;
+	font-size: 14px; /* Default font size */
+	font-family: 'Ubuntu', arial, serif;  /* Default font */
+	
+	border: none;
+	border-top: 1px solid #eee;	
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	letter-spacing: 0px;
+	font-weight: bold;
+	padding: 				0.5em 1em 0.5em 1em;
+	margin: 				0px;
+
+	color: #555!important;
+  background-color: #eeeeee;
+  background-image: -moz-linear-gradient(top, #eeeeee, #aaaaaa); 
+  background-image: -ms-linear-gradient(top, #eeeeee, #aaaaaa); 
+  background-image: -o-linear-gradient(top, #eeeeee, #aaaaaa); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#aaaaaa)); 
+  background-image: -webkit-linear-gradient(top, #eeeeee, #aaaaaa); 
+  background-image: linear-gradient(top, #eeeeee, #aaaaaa);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#aaaaaa'); 
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+
+	
+}
+
+.li-banner .abutton:hover {
+  background-color: #dddddd;
+  background-image: -moz-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -ms-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -o-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#aaaaaa)); 
+  background-image: -webkit-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: linear-gradient(top, #dddddd, #aaaaaa);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dddddd', EndColorStr='#aaaaaa'); 
+
+	color: #333!important;
+	border-top: solid 1px #eee;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+}
+
+.li-banner .abutton:active {
+	color: #222!important;
+	border-top: solid 1px #eee;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	margin: 				0.1em 0.1em 0.1em 0.1em;
+
+  background-color: #dddddd;
+  background-image: -moz-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -ms-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -o-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#aaaaaa)); 
+  background-image: -webkit-linear-gradient(top, #dddddd, #aaaaaa); 
+  background-image: linear-gradient(top, #dddddd, #aaaaaa);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dddddd', EndColorStr='#aaaaaa'); 
+}
+
+/* cbutton colors */
+
+.li-banner .abutton.cwhite {
+	color: #999!important;
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff, #ddd); 
+  background-image: -ms-linear-gradient(top, #fff, #ddd); 
+  background-image: -o-linear-gradient(top, #fff, #ddd); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd)); 
+  background-image: -webkit-linear-gradient(top, #fff, #ddd); 
+  background-image: linear-gradient(top, #fff, #ddd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#dddddd'); 
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.li-banner .abutton.cwhite:hover {
+	color: #555!important;
+  background-color: #fff;
+  background-image: -moz-linear-gradient(top, #fff, #eee); 
+  background-image: -ms-linear-gradient(top, #fff, #eee); 
+  background-image: -o-linear-gradient(top, #fff, #eee); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); 
+  background-image: -webkit-linear-gradient(top, #fff, #eee); 
+  background-image: linear-gradient(top, #fff, #eee);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eeeeee'); 
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.li-banner .abutton.cblack {
+	border-top: 1px solid #555;
+	color: #ddd!important;
+  background-color: #111;
+  background-image: -moz-linear-gradient(top, #333, #000); 
+  background-image: -ms-linear-gradient(top, #333, #000); 
+  background-image: -o-linear-gradient(top, #333, #000); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#000)); 
+  background-image: -webkit-linear-gradient(top, #333, #000); 
+  background-image: linear-gradient(top, #333, #000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#000000'); 
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+}
+
+.li-banner .abutton.cblack:hover {
+	color: #ddd!important;
+  background-image: -moz-linear-gradient(top, #444, #111); 
+  background-image: -ms-linear-gradient(top, #444, #111); 
+  background-image: -o-linear-gradient(top, #444, #111); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#111)); 
+  background-image: -webkit-linear-gradient(top, #444, #111); 
+  background-image: linear-gradient(top, #444, #111);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#444444', EndColorStr='#111111'); 
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+}
+
+.li-banner .abutton.corange {
+	border-top: 1px solid #ffbc76;
+	color: #fff!important;
+  background-color: #ff4500;
+  background-image: -moz-linear-gradient(top, #ff9f37, #ec5e00); 
+  background-image: -ms-linear-gradient(top, #ff9f37, #ec5e00); 
+  background-image: -o-linear-gradient(top, #ff9f37, #ec5e00); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9f37), to(#ec5e00)); 
+  background-image: -webkit-linear-gradient(top, #ff9f37, #ec5e00); 
+  background-image: linear-gradient(top, #ff9f37, #ec5e00);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff9f37', EndColorStr='#ec5e00'); 
+	text-shadow: 0 -1px 0 rgba(200, 200, 200, .8);
+}
+
+.li-banner .abutton.corange:hover {
+	color: #fff!important;
+  background-image: -moz-linear-gradient(top, #ff8400, #d25400); 
+  background-image: -ms-linear-gradient(top, #ff8400, #d25400); 
+  background-image: -o-linear-gradient(top, #ff8400, #d25400); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8400), to(#d25400)); 
+  background-image: -webkit-linear-gradient(top, #ff8400, #d25400); 
+  background-image: linear-gradient(top, #ff8400, #d25400);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff8400', EndColorStr='#d25400'); 
+	text-shadow: 0 -1px 0 rgba(100, 100, 100, 0.8);
+}
+
+.li-banner .abutton.cgreen {
+	border-top: 1px solid #b2ff58;
+	color: #fff!important;
+  background-color: #66c800;
+  background-image: -moz-linear-gradient(top, #8aff00, #4ca001); 
+  background-image: -ms-linear-gradient(top, #8aff00, #4ca001); 
+  background-image: -o-linear-gradient(top, #8aff00, #4ca001); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8aff00), to(#4ca001)); 
+  background-image: -webkit-linear-gradient(top, #8aff00, #4ca001); 
+  background-image: linear-gradient(top, #8aff00, #4ca001);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#8aff00', EndColorStr='#4ca001'); 
+	text-shadow: 0 -1px 0 rgba(200, 200, 200, .8);
+}
+
+.li-banner .abutton.cgreen:hover {
+	color: #fff!important;
+  background-image: -moz-linear-gradient(top, #71d002, #387601); 
+  background-image: -ms-linear-gradient(top, #71d002, #387601); 
+  background-image: -o-linear-gradient(top, #71d002, #387601); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#71d002), to(#387601)); 
+  background-image: -webkit-linear-gradient(top, #71d002, #387601); 
+  background-image: linear-gradient(top, #71d002, #387601);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#71d002', EndColorStr='#387601'); 
+	text-shadow: 0 -1px 0 rgba(100, 100, 100, 0.8);
+}
+
+
+.li-banner .abutton.cblue {
+	border-top: 1px solid #7fc7ff;
+	color: #fff!important;
+  background-color: #0c7cdb;
+  background-image: -moz-linear-gradient(top, #1e9dff, #0065c3); 
+  background-image: -ms-linear-gradient(top, #1e9dff, #0065c3); 
+  background-image: -o-linear-gradient(top, #1e9dff, #0065c3); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1e9dff), to(#0065c3)); 
+  background-image: -webkit-linear-gradient(top, #1e9dff, #0065c3); 
+  background-image: linear-gradient(top, #1e9dff, #0065c3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#1e9dff', EndColorStr='#0065c3'); 
+	text-shadow: 0 -1px 0 rgba(100, 100, 100, .8);
+}
+
+.li-banner .abutton.cblue:hover {
+	color: #fff!important;
+  background-image: -moz-linear-gradient(top, #0090ff, #0153a0); 
+  background-image: -ms-linear-gradient(top, #0090ff, #0153a0); 
+  background-image: -o-linear-gradient(top, #0090ff, #0153a0); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0090ff), to(#0153a0)); 
+  background-image: -webkit-linear-gradient(top, #0090ff, #0153a0); 
+  background-image: linear-gradient(top, #0090ff, #0153a0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#0090ff', EndColorStr='#0153a0'); 
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.li-banner .abutton.cpink {
+	border-top: 1px solid #ff91a6;
+	color: #fff!important;
+  background-color: #ff466f;
+  background-image: -moz-linear-gradient(top, #ff6f8a, #ff2659); 
+  background-image: -ms-linear-gradient(top, #ff6f8a, #ff2659); 
+  background-image: -o-linear-gradient(top, #ff6f8a, #ff2659); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff6f8a), to(#ff2659)); 
+  background-image: -webkit-linear-gradient(top, #ff6f8a, #ff2659); 
+  background-image: linear-gradient(top, #ff6f8a, #ff2659);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff6f8a', EndColorStr='#ff2659'); 
+	text-shadow: 0 -1px 0 rgba(100, 100, 100, .8);
+}
+
+.li-banner .abutton.cpink:hover {
+	color: #fff;
+  background-image: -moz-linear-gradient(top, #ff4d73, #f1003e); 
+  background-image: -ms-linear-gradient(top, #ff4d73, #f1003e); 
+  background-image: -o-linear-gradient(top, #ff4d73, #f1003e); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff4d73), to(#f1003e)); 
+  background-image: -webkit-linear-gradient(top, #ff4d73, #f1003e); 
+  background-image: linear-gradient(top, #ff4d73, #f1003e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff4d73', EndColorStr='#f1003e'); 
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+/*===============================================================================================*/
+
+
+/* -------------- Fonts -------------- */
+
+.li-banner .fbuda {
+		font-family: 'Buda', arial, serif;
+}
+
+.li-banner .fubuntu {
+		font-family: 'Ubuntu', arial, serif;;
+}
+
+.li-banner .fdroid {
+		font-family: 'Droid Sans', arial, serif;
+}
+
+.li-banner .flobster {
+		font-family: 'Lobster', arial, serif;
+}
+
+
+/* -------------- Sizes -------------- */
+
+.li-banner .xxxs { font-size: 8px!important; }
+.li-banner .xxs { font-size: 10px!important; }
+.li-banner .xs { font-size: 11px!important; }
+.li-banner .s { font-size: 12px!important; }
+.li-banner .l { font-size: 16px!important; }
+.li-banner .xl { font-size: 18px!important; }
+.li-banner .xxl { font-size: 22px!important; }
+.li-banner .xxxl { font-size: 26px!important; }
+
+
+/*--------------- Opacity -------------*/
+.li-banner .opacity10 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";/* IE 8 */
+  filter: alpha(opacity=10);/* IE 5-7 */
+  -moz-opacity: 0.1;/* Netscape */
+  -khtml-opacity: 0.1;/* Safari 1.x */
+  opacity: 0.1;  /* Good browsers */
+}
+
+.li-banner .opacity20 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";/* IE 8 */
+  filter: alpha(opacity=20);/* IE 5-7 */
+  -moz-opacity: 0.2;/* Netscape */
+  -khtml-opacity: 0.2;/* Safari 1.x */
+  opacity: 0.2;  /* Good browsers */
+}
+
+.li-banner .opacity30 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";/* IE 8 */
+  filter: alpha(opacity=30);/* IE 5-7 */
+  -moz-opacity: 0.3;/* Netscape */
+  -khtml-opacity: 0.3;/* Safari 1.x */
+  opacity: 0.3;  /* Good browsers */
+}
+
+.li-banner .opacity40 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";/* IE 8 */
+  filter: alpha(opacity=40);/* IE 5-7 */
+  -moz-opacity: 0.4;/* Netscape */
+  -khtml-opacity: 0.4;/* Safari 1.x */
+  opacity: 0.3;  /* Good browsers */
+}
+
+.li-banner .opacity50 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";/* IE 8 */
+  filter: alpha(opacity=50);/* IE 5-7 */
+  -moz-opacity: 0.5;/* Netscape */
+  -khtml-opacity: 0.5;/* Safari 1.x */
+  opacity: 0.3;  /* Good browsers */
+}
+
+.li-banner .opacity60 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";/* IE 8 */
+  filter: alpha(opacity=60);/* IE 5-7 */
+  -moz-opacity: 0.6;/* Netscape */
+  -khtml-opacity: 0.6;/* Safari 1.x */
+  opacity: 0.6;  /* Good browsers */
+}
+
+.li-banner .opacity70 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";/* IE 8 */
+  filter: alpha(opacity=70);/* IE 5-7 */
+  -moz-opacity: 0.7;/* Netscape */
+  -khtml-opacity: 0.7;/* Safari 1.x */
+  opacity: 0.7;  /* Good browsers */
+}
+
+.li-banner .opacity80 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";/* IE 8 */
+  filter: alpha(opacity=80);/* IE 5-7 */
+  -moz-opacity: 0.8;/* Netscape */
+  -khtml-opacity: 0.8;/* Safari 1.x */
+  opacity: 0.8;  /* Good browsers */
+}
+
+.li-banner .opacity90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";/* IE 8 */
+  filter: alpha(opacity=90);/* IE 5-7 */
+  -moz-opacity: 0.9;/* Netscape */
+  -khtml-opacity: 0.9;/* Safari 1.x */
+  opacity: 0.9;  /* Good browsers */
+}
+
+.li-banner .opacity100 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";/* IE 8 */
+  filter: alpha(opacity=100);/* IE 5-7 */
+  -moz-opacity: 1;/* Netscape */
+  -khtml-opacity: 1;/* Safari 1.x */
+  opacity: 1;  /* Good browsers */
+}
+
+/* -------------- Shapes -------------- */
+
+/* round */
+.li-banner .sround, .li-banner .sround.glossy:after, .li-banner .sround.glass:after { 
+	border-top: none; 
+	-webkit-border-radius: 	1em; 
+	-moz-border-radius: 	1em; 
+	border-radius: 			1em; 
+}
+
+/* oval */
+.li-banner .soval {
+	border-top: 			none; 
+	padding-left: 			.8em;
+	padding-right: 			.8em;
+	-webkit-border-radius: 	5em / 2em; 
+	-moz-border-radius: 	5em / 2em; 
+	border-radius: 			5em / 2em; 
+}
+
+
+/* brackets */
+.li-banner .sbrackets { 
+	border-top: 			none; 
+	-webkit-border-radius: 	.5em / 1em;
+	-moz-border-radius: 	.5em / 1em;
+	border-radius: 			.5em / 1em;
+}
+
+/* skew */
+.li-banner .sskew { 
+	border-top: 			none; 
+	padding-right: 			1.2em;
+	padding-left: 			0.8em;	
+	-webkit-border-radius: 	5em 1em / 5em 1em;  
+	-moz-border-radius: 	5em 1em / 5em 1em;  
+	border-radius: 			5em 1em / 5em 1em;  
+}
+
+
+/* back */
+.li-banner .sback { 
+	border-top-color: 		rgba(255,255,255,0.5);
+	-webkit-border-radius: 	1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+	-moz-border-radius: 	1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+	border-radius: 			1.6em 1.6em 1em 1em / 4em 4em 1em 1em; 
+}
+
+/* knife */
+.li-banner .sknife { 						
+	padding-left: 1.5em;
+	-webkit-border-radius: 	.2em .5em .5em 8em / .2em .5em .5em 5em; 
+	-moz-border-radius: 	.2em .5em .5em 8em / .2em .5em .5em 5em; 
+	border-radius: 			.2em .5em .5em 8em / .2em .5em .5em 5em; 
+}
+
+/* shield */
+.li-banner .sshield { 
+	-webkit-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em; 
+	-moz-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	border-radius: 			.4em .4em 2em 2em / .4em .4em 3em 3em;
+	padding-left: 	.8em;
+	padding-right: 	.8em;
+}
+
+
+/* drop */
+.li-banner .sdrop {
+	border-top: none;
+	-webkit-border-radius: 	2em 5em  2em .6em / 2em 4em 2em .6em; 
+	-moz-border-radius: 	2em 5em  2em .6em / 2em 4em 2em .6em; 
+	border-radius: 			2em 5em  2em .6em / 2em 4em 2em .6em; 
+}
+
+/* morph */
+.li-banner .smorph {
+	border-top: none;
+	-webkit-border-radius: 	5em / 2em;
+	-moz-border-radius: 	5em / 2em;
+	border-radius: 			5em / 2em;
+	-webkit-transition: 	-webkit-border-radius .3s ease-in-out;
+	-moz-transition: 		-moz-border-radius .3s ease-in-out;
+	transition: 			-moz-border-radius .3s ease-in-out;
+}
+.li-banner .morph:hover { 
+	-webkit-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	-moz-border-radius: 	.4em .4em 2em 2em / .4em .4em 3em 3em;
+	border-radius: 			.4em .4em 2em 2em / .4em .4em 3em 3em;
+}
+.li-banner .morph:active { 
+	-webkit-border-radius: 	.3em;
+	-moz-border-radius: 	.3em;
+	border-radius: 			.3em;
+}
+.li-banner .morph:after { 
+	display: none;
+}
+
+
+/*-------- Shadows ---------- */
+.li-banner .tshadow {
+	 text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+							 
+}
+							 
+/* Shadow */
+.li-banner #shadow {
+	width: 650px;
+	height:275px;
+	padding: 0px 0px 0px 0px;
+	 
+    margin: auto;
+    background: #ccc;
+    border: 0px solid white;
+    position:relative;
+}
+.li-banner .sh_bottom{
+    width: 100%; height: 45%;
+    position:absolute;
+    z-index: -2;
+    bottom: 0; right: 0;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+.li-banner .sh_bottom:after{
+    content: "";
+    position:absolute;
+    right: 0; bottom:0;
+    width:150px; height: 100px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.30);
+    -webkit-box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.30);
+    box-shadow: 20px 30px 10px rgba(0, 0, 0, 0.30);
+    -moz-transform:skew(10deg,10deg) translate(-40px,-15px);
+    -webkit-transform:skew(10deg,10deg) translate(-40px,-15px);
+    transform:skew(10deg,10deg) translate(-40px,-15px);
+}
+.li-banner .sh_bottom:before{
+    content: "";
+    position:absolute;
+    left: 0; bottom:0;
+    width:150px; height: 100px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.30);
+    -webkit-box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.30);
+    box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.30);
+    -webkit-transform:skew(-10deg,-10deg) translate(40px,-15px);
+    -moz-transform:skew(-10deg,-10deg) translate(40px,-15px);
+    transform:skew(-10deg,-10deg) translate(40px,-15px);
+}
+
+
+
+/* Some ugly hacks for FF. 
+Thanks to David Hund for some help - http://valuedstandards.com/static/test/buttons/ */
+@-moz-document url-prefix() {
+	.li-banner .knife { padding-left: 2em; }
+
+
+
+/* shadows */
+
+
+/*************************************** SHADOW STYLES ****************************************/
+
+
+/******************************************************/
+/****** WARP SHADOW ******/
+
+.li-banner .WarpShadow {
+    position: relative;
+	-moz-box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+	box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+}
+
+.li-banner .WarpShadow:before, .li-banner .WarpShadow:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	bottom: 15px;
+	-moz-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);	
+}
+
+.li-banner .WarpShadow:before {
+	  right: 10px;
+	  -moz-transform: rotate(4deg) skew(4deg);
+	  -webkit-transform: rotate(4deg) skew(4deg);
+	  -o-transform: rotate(4deg) skew(4deg);
+	  transform: rotate(4deg) skew(4deg);	  			  
+}
+
+/**  'smallBox' class for boxes with width between 150px - 350px  **/
+.li-banner .smallBox.WarpShadow:before {
+	  -moz-transform: rotate(8deg) skew(4deg);
+	  -webkit-transform: rotate(8deg) skew(4deg);
+	  -o-transform: rotate(8deg) skew(4deg);
+	  transform: rotate(8deg) skew(4deg);	  			  
+}
+	
+.li-banner .WarpShadow:after {
+	  left: 10px;
+	  -moz-transform: rotate(-4deg) skew(-4deg);
+	  -webkit-transform: rotate(-4deg) skew(-4deg);
+	  -o-transform: rotate(-4deg) skew(-4deg);
+	  transform: rotate(-4deg) skew(-4deg);
+}
+
+.li-banner .smallBox.WarpShadow:after {
+	  -moz-transform: rotate(-8deg) skew(-4deg);
+	  -webkit-transform: rotate(-8deg) skew(-4deg);
+	  -o-transform: rotate(-8deg) skew(-4deg);
+	  transform: rotate(-8deg) skew(-4deg);
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .WSmall:before, .li-banner .WSmall:after {
+	width: 150px;
+}
+
+.li-banner .smallBox.WSmall:before, .li-banner .smallBox.WSmall:after {
+	width: 30px;
+}
+
+.li-banner .WMedium:before, .li-banner .WMedium:after {
+	width: 250px;
+}
+
+.li-banner .smallBox.WMedium:before, .li-banner .smallBox.WMedium:after {
+	width: 80px;
+}
+
+.li-banner .WLarge:before, .li-banner .WLarge:after {
+	width: 350px;
+}
+
+.li-banner .smallBox.WLarge:before, .li-banner .smallBox.WLarge:after {
+	width: 130px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .WLight:before, .li-banner .WLight:after {
+	height: 5px;
+}
+
+.li-banner .WNormal:before, .li-banner .WNormal:after {
+	height: 10px;
+}
+
+.li-banner .WDark:before, .li-banner .WDark:after {
+	height: 15px;
+}
+
+
+
+
+
+
+/******************************************************/
+/****** RIGHT SIDE WARP SHADOW ******/
+
+.li-banner .RightWarpShadow {
+	position: relative;
+	-moz-box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+	box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+}
+
+.li-banner .RightWarpShadow:before, .li-banner .RightWarpShadow:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-moz-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);	
+}
+
+.li-banner .RightWarpShadow:before {
+	  right: 10px;
+	  bottom: 15px;
+	  -moz-transform: rotate(4deg) skew(4deg);
+	  -webkit-transform: rotate(4deg) skew(4deg);
+	  -o-transform: rotate(4deg) skew(4deg);
+	  transform: rotate(4deg) skew(4deg);	  			  
+}
+
+/**  'smallBox' class for boxes with width between 150px - 350px  **/
+.li-banner .smallBox.RightWarpShadow:before {
+	  -moz-transform: rotate(8deg) skew(4deg);
+	  -webkit-transform: rotate(8deg) skew(4deg);
+	  -o-transform: rotate(8deg) skew(4deg);
+	  transform: rotate(8deg) skew(4deg);	  			  
+}
+
+.li-banner .RightWarpShadow:after {
+	  left: 10px;
+	  bottom: 20px;
+	  -moz-transform: rotate(-4deg) skew(-4deg);
+	  -webkit-transform: rotate(-4deg) skew(-4deg);
+	  -o-transform: rotate(-4deg) skew(-4deg);
+	  transform: rotate(-4deg) skew(-4deg);
+}
+
+.li-banner .smallBox.RightWarpShadow:after {
+	  -moz-transform: rotate(-8deg) skew(-4deg);
+	  -webkit-transform: rotate(-8deg) skew(-4deg);
+	  -o-transform: rotate(-8deg) skew(-4deg);
+	  transform: rotate(-8deg) skew(-4deg);
+}
+
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .RWSmall:before, .li-banner .RWSmall:after {
+	width: 150px;
+}
+
+.li-banner .smallBox.RWSmall:before, .li-banner .smallBox.RWSmall:after {
+	width: 30px;
+}
+
+.li-banner .RWMedium:before, .li-banner .RWMedium:after {
+	width: 250px;
+}
+
+.li-banner .smallBox.RWMedium:before, .li-banner .smallBox.RWMedium:after {
+	width: 80px;
+}
+
+.li-banner .RWLarge:before, .li-banner .RWLarge:after {
+	width: 350px;
+}
+
+.li-banner .smallBox.RWLarge:before, .li-banner .smallBox.RWLarge:after {
+	width: 130px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .RWLight:before, .li-banner .RWLight:after {
+	height: 5px;
+}
+
+.li-banner .RWNormal:before, .li-banner .RWNormal:after {
+	height: 10px;
+}
+
+.li-banner .RWDark:before, .li-banner .RWDark:after {
+	height: 15px;
+}
+
+
+
+
+
+
+/******************************************************/
+/****** LEFT SIDE WARP SHADOW ******/
+
+.li-banner .LeftWarpShadow {
+	position: relative;
+	-moz-box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+	box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+}
+
+.li-banner .LeftWarpShadow:before, .li-banner .LeftWarpShadow:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-moz-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);	
+}
+
+.li-banner .LeftWarpShadow:before {
+	  right: 10px;
+	  bottom: 20px;
+	  -moz-transform: rotate(4deg) skew(4deg);
+	  -webkit-transform: rotate(4deg) skew(4deg);
+	  -o-transform: rotate(4deg) skew(4deg);
+	  transform: rotate(4deg) skew(4deg);	  			  
+}
+
+/**  'smallBox' class for boxes with width between 150px - 350px  **/
+.li-banner .smallBox.LeftWarpShadow:before {
+	  -moz-transform: rotate(8deg) skew(4deg);
+	  -webkit-transform: rotate(8deg) skew(4deg);
+	  -o-transform: rotate(8deg) skew(4deg);
+	  transform: rotate(8deg) skew(4deg);	  			  
+}
+
+
+.li-banner .LeftWarpShadow:after {
+	  left: 10px;
+	  bottom: 15px;
+	  -moz-transform: rotate(-4deg) skew(-4deg);
+	  -webkit-transform: rotate(-4deg) skew(-4deg);
+	  -o-transform: rotate(-4deg) skew(-4deg);
+	  transform: rotate(-4deg) skew(-4deg);
+}
+
+.li-banner .smallBox.LeftWarpShadow:after {
+	  -moz-transform: rotate(-8deg) skew(-4deg);
+	  -webkit-transform: rotate(-8deg) skew(-4deg);
+	  -o-transform: rotate(-8deg) skew(-4deg);
+	  transform: rotate(-8deg) skew(-4deg);
+}
+
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .LWSmall:before, .li-banner .LWSmall:after {
+	width: 150px;
+}
+
+.li-banner .smallBox.LWSmall:before, .li-banner .smallBox.LWSmall:after {
+	width: 30px;
+}
+
+.li-banner .LWMedium:before, .li-banner .LWMedium:after {
+	width: 250px;
+}
+
+.li-banner .smallBox.LWMedium:before, .li-banner .smallBox.LWMedium:after {
+	width: 80px;
+}
+
+.li-banner .LWLarge:before, .li-banner .LWLarge:after {
+	width: 350px;
+}
+
+.li-banner .smallBox.LWLarge:before, .li-banner .smallBox.LWLarge:after {
+	width: 130px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .LWLight:before, .li-banner .LWLight:after {
+	height: 5px;
+}
+
+.li-banner .LWNormal:before, .li-banner .LWNormal:after {
+	height: 10px;
+}
+
+.li-banner .LWDark:before, .li-banner .LWDark:after {
+	height: 15px;
+}
+
+
+
+
+
+
+/******************************************************/
+/****** LEFT SIDE PERSPECTIVE SHADOW ******/
+/*** (FOR BOXES OF SIZE GREATER THAN 150x150 px) ***/
+
+.li-banner .LeftPerspectiveShadow {
+	position: relative;
+	-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.li-banner .LeftPerspectiveShadow:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	bottom: 15px;
+	width: 90px;
+	-moz-transform: skew(50deg);
+	-webkit-transform: skew(50deg);
+	-o-transform: skew(50deg);
+	transform: skew(50deg);
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .LPSmall:before {
+	left: 114px;
+	height: 20px;
+}
+
+.li-banner .LPMedium:before {
+	left: 102px;
+	height: 40px;
+}
+
+.li-banner .LPLarge:before {
+	left: 90px;
+	height: 60px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .LPLight:before {
+	-moz-box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.2);
+	box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.2);	
+}
+
+.li-banner .LPNormal:before {
+	-moz-box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.35);
+	box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.35);
+}
+
+.li-banner .LPDark:before {
+	-moz-box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.5);
+	box-shadow: -130px 0 8px 14px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+/******************************************************/
+/****** RIGHT SIDE PERSPECTIVE SHADOW ******/
+/*** (FOR BOXES OF SIZE GREATER THAN 150x150 px) ***/
+
+.li-banner .RightPerspectiveShadow {
+	position: relative;
+	-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.li-banner .RightPerspectiveShadow:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	bottom: 15px;
+	width: 90px;
+	-moz-transform: skewX(-50deg);
+	-webkit-transform: skewX(-50deg);
+	-o-transform: skewX(-50deg);
+	transform: skewX(-50deg);
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .RPSmall:before {
+	right: 114px;
+	height: 20px;
+}
+
+.li-banner .RPMedium:before {
+	right: 102px;
+	height: 40px;
+}
+
+.li-banner .RPLarge:before {
+	right: 90px;
+	height: 60px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .RPLight:before {
+	-moz-box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.2);
+	box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+.li-banner .RPNormal:before {
+	-moz-box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.35);
+	box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.35);
+}
+
+.li-banner .RPDark:before {
+	-moz-box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.5);
+	box-shadow: 130px 0 8px 14px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+/******************************************************/
+/****** BOTTOM PERSPECTIVE SHADOW ******/
+
+.li-banner .BottomShadow {
+	position: relative;	
+}
+
+.li-banner .BottomShadow:before, .li-banner .BottomShadow:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	width: 30px;
+	height: 50px;
+}
+
+.li-banner .BottomShadow:before {
+	-moz-transform: skew(40deg);
+	-webkit-transform: skew(40deg);
+	-o-transform: skew(40deg);
+	transform: skew(40deg);	
+}
+
+.li-banner .BottomShadow:after {
+	-moz-transform: skew(-40deg);
+	-webkit-transform: skew(-40deg);
+	-o-transform: skew(-40deg);
+	transform: skew(-40deg);	
+}
+
+
+
+/*** SMALL SHADOW STYLES ***/
+
+/* LIGHT */
+.li-banner .BSmall.BLight {
+	-moz-box-shadow: 0 52px 26px -36px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0 52px 30px -39px rgba(0,0,0,0.7);
+	box-shadow: 0 52px 30px -39px rgba(0,0,0,0.7);
+}
+
+.li-banner .BSmall.BLight:before {
+	right: 54px;
+	-moz-box-shadow: 9px 17px 18px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 14px 17px 26px rgba(0, 0, 0, 0.2);
+	box-shadow: 9px 17px 18px rgba(0, 0, 0, 0.2);
+}
+
+.li-banner .BSmall.BLight:after {
+	left: 54px;
+	-moz-box-shadow: -9px 17px 18px rgba(0, 0, 0, 0.2);	
+	-webkit-box-shadow: -14px 17px 26px rgba(0, 0, 0, 0.2);
+	box-shadow: -9px 17px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* NORMAL */
+.li-banner .BSmall.BNormal {
+	-moz-box-shadow: 0 52px 26px -36px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 0 52px 30px -39px rgba(0,0,0,0.8);
+	box-shadow: 0 52px 30px -39px rgba(0,0,0,0.8);
+}
+
+.li-banner .BSmall.BNormal:before {
+	right: 54px;
+	-moz-box-shadow: 9px 17px 18px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 14px 17px 26px rgba(0, 0, 0, 0.3);
+	box-shadow: 9px 17px 18px rgba(0, 0, 0, 0.3);
+}
+
+.li-banner .BSmall.BNormal:after {
+	left: 54px;
+	-moz-box-shadow: -9px 17px 18px rgba(0, 0, 0, 0.3);	
+	-webkit-box-shadow: -14px 17px 26px rgba(0, 0, 0, 0.3);
+	box-shadow: -9px 17px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+/* DARK */
+.li-banner .BSmall.BDark {
+	-moz-box-shadow: 0 52px 26px -36px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0 52px 30px -39px rgba(0,0,0,0.9);
+	box-shadow: 0 52px 30px -39px rgba(0,0,0,0.9);
+}
+
+.li-banner .BSmall.BDark:before {
+	right: 54px;
+	-moz-box-shadow: 9px 17px 18px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 14px 17px 26px rgba(0, 0, 0, 0.4);
+	box-shadow: 9px 17px 18px rgba(0, 0, 0, 0.4);
+}
+
+.li-banner .BSmall.BDark:after {
+	left: 54px;
+	-moz-box-shadow: -9px 17px 18px rgba(0, 0, 0, 0.4);	
+	-webkit-box-shadow: -14px 17px 26px rgba(0, 0, 0, 0.4);
+	box-shadow: -9px 17px 18px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/*** MEDIUM SHADOW STYLES ***/
+
+/* LIGHT */
+.li-banner .BMedium.BLight {
+	-moz-box-shadow: 0 58px 26px -36px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0 60px 44px -39px rgba(0,0,0,0.7);
+	box-shadow: 0 58px 30px -39px rgba(0,0,0,0.7);
+}
+
+
+.li-banner .BMedium.BLight:before {
+	right: 60px;
+	-moz-box-shadow: 9px 25px 18px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 14px 25px 26px rgba(0, 0, 0, 0.2);
+	box-shadow: 9px 25px 18px rgba(0, 0, 0, 0.2);
+}
+
+.li-banner .BMedium.BLight:after {
+	left: 60px;
+	-moz-box-shadow: -9px 25px 18px rgba(0, 0, 0, 0.2);	
+	-webkit-box-shadow: -14px 25px 26px rgba(0, 0, 0, 0.2);
+	box-shadow: -9px 25px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* NORMAL */
+.li-banner .BMedium.BNormal {
+	-moz-box-shadow: 0 58px 26px -36px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 0 60px 44px -39px rgba(0,0,0,0.8);
+	box-shadow: 0 58px 30px -39px rgba(0,0,0,0.8);
+}
+
+.li-banner .BMedium.BNormal:before {
+	right: 60px;
+	-moz-box-shadow: 9px 25px 18px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 14px 25px 26px rgba(0, 0, 0, 0.3);
+	box-shadow: 9px 25px 18px rgba(0, 0, 0, 0.3);
+}
+
+.li-banner .BMedium.BNormal:after {
+	left: 60px;
+	-moz-box-shadow: -9px 25px 18px rgba(0, 0, 0, 0.3);	
+	-webkit-box-shadow: -14px 25px 26px rgba(0, 0, 0, 0.3);
+	box-shadow: -9px 25px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+/* DARK */
+.li-banner .BMedium.BDark {
+	-moz-box-shadow: 0 58px 26px -36px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0 60px 44px -39px rgba(0,0,0,0.9);
+	box-shadow: 0 58px 30px -39px rgba(0,0,0,0.9);
+}
+
+.li-banner .BMedium.BDark:before {
+	right: 60px;
+	-moz-box-shadow: 9px 25px 18px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 14px 25px 26px rgba(0, 0, 0, 0.4);
+	box-shadow: 9px 25px 18px rgba(0, 0, 0, 0.4);
+}
+
+.li-banner .BMedium.BDark:after {
+	left: 60px;
+	-moz-box-shadow: -9px 25px 18px rgba(0, 0, 0, 0.4);	
+	-webkit-box-shadow: -14px 25px 26px rgba(0, 0, 0, 0.4);
+	box-shadow: -9px 25px 18px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/*** LARGE SHADOW STYLES ***/
+
+/* LIGHT */
+.li-banner .BLarge.BLight {
+	-moz-box-shadow: 0 64px 26px -36px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0 66px 58px -39px rgba(0,0,0,0.7);
+	box-shadow: 0 64px 30px -39px rgba(0,0,0,0.7);
+}
+
+.li-banner .BLarge.BLight:before {
+	right: 64px;
+	-moz-box-shadow: 9px 30px 18px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 10px 32px 26px rgba(0, 0, 0, 0.2);
+	box-shadow: 9px 28px 18px rgba(0, 0, 0, 0.2);
+}
+
+.li-banner .BLarge.BLight:after {
+	left: 64px;
+	-moz-box-shadow: -9px 30px 18px rgba(0, 0, 0, 0.2);	
+	-webkit-box-shadow: -10px 32px 26px rgba(0, 0, 0, 0.2);
+	box-shadow: -9px 28px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* NORMAL */
+.li-banner .BLarge.BNormal {
+	-moz-box-shadow: 0 64px 26px -36px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 0 66px 58px -39px rgba(0,0,0,0.8);
+	box-shadow: 0 64px 30px -39px rgba(0,0,0,0.8);	
+}
+
+.li-banner .BLarge.BNormal:before {
+	right: 64px;
+	-moz-box-shadow: 9px 30px 18px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 10px 32px 26px rgba(0, 0, 0, 0.3);
+	box-shadow: 9px 28px 18px rgba(0, 0, 0, 0.3);	
+}
+
+.li-banner .BLarge.BNormal:after {
+	left: 64px;
+	-moz-box-shadow: -9px 30px 18px rgba(0, 0, 0, 0.3);	
+	-webkit-box-shadow: -10px 32px 26px rgba(0, 0, 0, 0.3);
+	box-shadow: -9px 28px 18px rgba(0, 0, 0, 0.3);	
+}
+
+
+/* DARK */
+.li-banner .BLarge.BDark {
+	-moz-box-shadow: 0 64px 26px -36px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0 66px 58px -39px rgba(0,0,0,0.9);
+	box-shadow: 0 64px 30px -39px rgba(0,0,0,0.9);
+}
+
+.li-banner .BLarge.BDark:before {
+	right: 64px;
+	-moz-box-shadow: 9px 30px 18px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 10px 32px 26px rgba(0, 0, 0, 0.4);
+	box-shadow: 9px 28px 18px rgba(0, 0, 0, 0.4);
+}
+
+.li-banner .BLarge.BDark:after {
+	left: 64px;
+	-moz-box-shadow: -9px 30px 18px rgba(0, 0, 0, 0.4);	
+	-webkit-box-shadow: -10px 32px 26px rgba(0, 0, 0, 0.4);
+	box-shadow: -9px 28px 18px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+/******************************************************/
+/****** HOVER SHADOW ******/
+
+.li-banner .HoverShadow {
+	position: relative;
+}
+
+.li-banner .HoverShadow:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	bottom: 0;		
+	height: 20px;	
+}
+
+.li-banner .HoverShadow.safari:after {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.li-banner .HoverShadow.safari .after {
+	position: absolute;
+	z-index: -1;
+	bottom: 0;		
+	height: 20px;
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .HSmall:after, .li-banner .HSmall.safari .after {
+	width: 80%;
+	left: 10%;
+}
+
+.li-banner .HSmall:after {
+	-moz-border-radius: 40%/10px;
+	-webkit-border-radius: 40%/10px;
+	border-radius: 40%/10px;
+}
+
+.li-banner .HMedium:after, .li-banner .HMedium.safari .after {
+	width: 90%;
+	left: 5%;	
+}
+
+.li-banner .HMedium:after {
+	-moz-border-radius: 45%/10px;
+	-webkit-border-radius: 45%/10px;
+	border-radius: 45%/10px;
+}
+
+.li-banner .HLarge:after, .li-banner .HLarge.safari .after {
+	width: 100%;
+	left: 0;	
+}
+
+.li-banner .HLarge:after {
+	-moz-border-radius: 50%/10px;
+	-webkit-border-radius: 50%/10px;
+	border-radius: 50%/10px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .HLight:after, .li-banner .HLight.safari .after {
+	-moz-box-shadow: 0 50px 15px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 50px 15px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 50px 15px rgba(0, 0, 0, 0.3);
+}
+
+.li-banner .HNormal:after, .li-banner .HNormal.safari .after {
+	-moz-box-shadow: 0 50px 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 50px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 50px 15px rgba(0, 0, 0, 0.5);
+}
+
+.li-banner .HDark:after, .li-banner .HDark.safari .after {
+	-moz-box-shadow: 0 50px 15px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0 50px 15px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 50px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+/******************************************************/
+/****** STAND SHADOW ******/
+
+.li-banner .StandShadow {
+	position: relative;
+}
+
+.li-banner .StandShadow:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	bottom: 40px;		
+	height: 40px;
+}
+
+.li-banner .StandShadow.safari:after {
+	display: none;
+}
+
+.li-banner .StandShadow.safari .after {
+	position: absolute;
+	z-index: -1;
+	bottom: 40px;		
+	height: 40px;
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .SSmall:after, .li-banner .SSmall.safari .after {
+	width: 105%;
+	left: -2.5%;
+}
+
+.li-banner .SSmall:after {
+	-moz-border-radius: 52.5%/20px;
+	-webkit-border-radius: 52.5%/20px;
+	border-radius: 52.5%/20px;
+}
+
+.li-banner .SMedium:after, .li-banner .SMedium.safari .after {
+	width: 110%;
+	left: -5%;	
+}
+
+.li-banner .SMedium:after {
+	-moz-border-radius: 55%/20px;
+	-webkit-border-radius: 55%/20px;
+	border-radius: 55%/20px;
+}
+
+.li-banner .SLarge:after, .li-banner .SLarge.safari .after {
+	width: 115%;
+	left: -7.5%;	
+}
+
+.li-banner .SLarge:after {
+	-moz-border-radius: 57.5%/20px;
+	-webkit-border-radius: 57.5%/20px;
+	border-radius: 57.5%/20px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .SLight:after, .li-banner .SLight.safari .after {
+	-moz-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 60px 15px rgba(0, 0, 0, 0.3);
+}
+
+.li-banner .SNormal:after, .li-banner .SNormal.safari .after {
+	-moz-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 60px 15px rgba(0, 0, 0, 0.5);
+}
+
+.li-banner .SDark:after, .li-banner .SDark.safari .after {
+	-moz-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0 60px 15px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 60px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+/******************************************************/
+/****** FOLD SHADOW ******/
+
+.li-banner .FoldShadow {
+    position: relative;
+}
+
+.li-banner .FoldShadow:after {
+	content: '';
+	position: absolute;
+	z-index: -2;	
+	left: 2%;
+	width: 96%;
+	height: 60px;
+	-moz-border-radius: 48%/30px;
+	-webkit-border-radius: 48%/30px;
+	border-radius: 48%/30px;
+}
+
+.li-banner .FoldShadow:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 30%;
+	width: 40%;
+	height: 60px;
+	-moz-border-radius: 15%/30px;
+	-webkit-border-radius: 15%/30px;
+	border-radius: 15%/30px;	
+}
+
+.li-banner .FoldShadow.safari:before, .li-banner .FoldShadow.safari:after {
+	display: none;
+}
+
+.li-banner .FoldShadow.safari .after {
+	position: absolute;
+	z-index: -2;	
+	left: 2%;
+	width: 96%;
+	height: 60px;
+}
+
+.li-banner .FoldShadow.safari .before {
+	position: absolute;
+	z-index: -1;
+	left: 30%;
+	width: 40%;
+	height: 60px;
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .FSmall:after, .li-banner .FSmall.safari .after {
+	bottom: 28px;
+}
+
+.li-banner .FSmall:before, .li-banner .FSmall.safari .before {
+	bottom: 48px;
+}
+
+.li-banner .FMedium:after, .li-banner .FMedium.safari .after {
+	bottom: 24px;
+}
+
+.li-banner .FMedium:before, .li-banner .FMedium.safari .before {
+	bottom: 44px;
+}
+
+.li-banner .FLarge:after, .li-banner .FLarge.safari .after {	
+	bottom: 20px;	
+}
+
+.li-banner .FLarge:before, .li-banner .FLarge.safari .before {
+	bottom: 40px;;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .FLight:after, .li-banner .FLight.safari .after {
+	-moz-box-shadow: 0 40px 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 40px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 40px 15px rgba(0, 0, 0, 0.5);
+}
+
+.li-banner .FLight:before, .li-banner .FLight.safari .before {
+	-moz-box-shadow: 0 50px 50px rgba(255, 255, 255, 0.4);
+	-webkit-box-shadow: 0 50px 50px rgba(255, 255, 255, 0.4);
+	box-shadow: 0 50px 50px rgba(255, 255, 255, 0.4);
+}
+
+.li-banner .FNormal:after, .li-banner .FNormal.safari .after {
+	-moz-box-shadow: 0 40px 15px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0 40px 15px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 40px 15px rgba(0, 0, 0, 0.6);
+}
+
+.li-banner .FNormal:before, .li-banner .FNormal.safari .before {
+	-moz-box-shadow: 0 50px 50px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 50px 50px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 50px 50px rgba(255, 255, 255, 0.5);
+}
+
+.li-banner .FDark:after, .li-banner .FDark.safari .after {
+	-moz-box-shadow: 0 40px 15px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0 40px 15px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 40px 15px rgba(0, 0, 0, 0.7);
+}
+
+.li-banner .FDark:before, .li-banner .FDark.safari .before {
+	-moz-box-shadow: 0 50px 50px rgba(255, 255, 255, 0.6);
+	-webkit-box-shadow: 0 50px 50px rgba(255, 255, 255, 0.6);
+	box-shadow: 0 50px 50px rgba(255, 255, 255, 0.6);
+}
+
+
+
+
+
+/******************************************************/
+/****** RIGHT SIDE CURL SHADOW ******/
+
+.li-banner .RightCurlShadow {
+	position: relative;	
+}
+
+.li-banner .RightCurlShadow:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 55px;
+	right: 58px;
+	width: 50px;	
+	-moz-transform: rotate(4deg) skew(-4deg);
+	-webkit-transform: rotate(4deg) skew(-4deg);
+	-o-transform: rotate(4deg) skew(-4deg);
+	transform: rotate(4deg) skew(-4deg);
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .RCSmall:before {	
+	height: 60%;
+}
+
+.li-banner .RCMedium:before {	
+	height: 70%;
+}
+
+.li-banner .RCLarge:before {	
+	height: 80%;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .RCLight:before {
+	-moz-box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.3);	
+}
+
+.li-banner .RCNormal:before {
+	-moz-box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.5);
+}
+
+.li-banner .RCDark:before {
+	-moz-box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.7);
+	box-shadow: 50px -40px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/******************************************************/
+/****** LEFT SIDE CURL SHADOW ******/
+
+.li-banner .LeftCurlShadow {
+	position: relative;
+}
+
+.li-banner .LeftCurlShadow:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 55px;
+	left: 58px;
+	width: 50px;	
+	-moz-transform: rotate(-4deg) skew(4deg);
+	-webkit-transform: rotate(-4deg) skew(4deg);
+	-o-transform: rotate(-4deg) skew(4deg);
+	transform: rotate(-4deg) skew(4deg);
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.li-banner .LCSmall:before {	
+	height: 60%;
+}
+
+.li-banner .LCMedium:before {	
+	height: 70%;
+}
+
+.li-banner .LCLarge:before {	
+	height: 80%;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.li-banner .LCLight:before {
+	-moz-box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.3);	
+}
+
+.li-banner .LCNormal:before {
+	-moz-box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.5);
+}
+
+.li-banner .LCDark:before {
+	-moz-box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.7);
+	box-shadow: -50px -40px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+

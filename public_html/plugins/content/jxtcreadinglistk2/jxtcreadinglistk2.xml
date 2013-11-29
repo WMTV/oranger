@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+  <name>JoomlaXTC Reading List for K2</name>
+	<author>JoomlaXTC</author>
+	<creationDate>2012-03-12</creationDate>
+	<copyright>Copyright (C) 2012 Monev Software LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.joomlaxtc.com</authorUrl>
+	<version>1.1.2</version>
+  <description>JoomlaXTC Reading List for K2</description>
+  <files>
+    <filename plugin="jxtcreadinglistk2">jxtcreadinglistk2.php</filename>
+    <folder>language</folder>
+    <folder>tmpl</folder>
+    <filename>index.html</filename>
+    <filename>jxtccat.php</filename>
+  </files>
+	<languages folder="language/">
+		<language tag="en-GB">en-GB.plg_content_jxtcreadinglistk2.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/plugins/content/jxtcreadinglistk2">
+			<fieldset name="basic">
+				<field name="placement" type="list" default="b" label="Button Placement" description="Choose to force a Reading List button on item content or use {readinglist} tag instead.">
+					<option value="t">Top of item</option>
+					<option value="b">Bottom of item</option>
+					<option value="0">Tag Only</option>
+				</field>
+				<field name="catid" type="jxtccat" default="0" label="Category ID" description="Content category." />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
