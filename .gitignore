@@ -4,8 +4,6 @@
 /hosting/
 /githooks/
 /mysql_log/
-/mysql/xtrabackup_*
-/mysql/backup-my.cnf
 /*/tmp/
 /*/logs/
 /*/cache/
