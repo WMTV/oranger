@@ -99,10 +99,22 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'caviar_dreamsregular';
+    src: url('../fonts/caviardreams_regular/CaviarDreams-webfont.eot');
+    src: url('../fonts/caviardreams_regular/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/caviardreams_regular/CaviarDreams-webfont.woff') format('woff'),
+         url('../fonts/caviardreams_regular/CaviarDreams-webfont.ttf') format('truetype'),
+         url('../fonts/caviardreams_regular/CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 #topmenu #mainmenu > li a,ul.suckerfish > li > a, ul.dualfish > li > a, ul.dropline > li > a,h1, h2, h3, h4, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6, #content .contentheading, #content .componentheading, .jnewstitle, .category, a.mainlevel, .contentheading span,div.pagination a,ul.pagenav a,span.pagenav, .items-more h3, .newstext h4 a, .newsitemwrap1 h4 a, ul.sidemenu a, a.article-readmore, a.article-readmore1, input.button, button, .button, h5.day, h5.month, ul.dualcol li, .unoslider_title,.category_title {
 /*font-family: LuxiBold, sans-serif !important;*/
 /*font-family: OxygenBold, sans-serif !important;*/
-font-family: bebas_neue, sans-serif !important; text-transform:uppercase !important;
+font-family: caviar_dreamsregular, sans-serif !important; text-transform:uppercase !important;
 font-weight:100 !important;
 
 }  
