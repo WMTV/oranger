@@ -846,7 +846,7 @@ INSERT INTO `do77s_categories` VALUES (15,40,1,25,32,1,'about-joomla','com_conte
 INSERT INTO `do77s_categories` VALUES (16,41,15,26,27,2,'about-joomla/the-project','com_content','The Project','the-project','','General facts about Joomla!<br />',1,0,'0000-00-00 00:00:00',1,'{}','','','',627,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `do77s_categories` VALUES (17,42,15,28,29,2,'about-joomla/the-cms','com_content','The CMS','the-cms','','Information about the software behind Joomla!<br />',1,0,'0000-00-00 00:00:00',1,'{}','','','',627,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `do77s_categories` VALUES (18,43,15,30,31,2,'about-joomla/the-community','com_content','The Community','the-community','','About the millions of Joomla! users and Web sites<br />',1,0,'0000-00-00 00:00:00',1,'{}','','','',627,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'*',1);
-INSERT INTO `do77s_categories` VALUES (19,44,1,19,24,1,'demo','com_content','Demo','demo','','',1,0,'0000-00-00 00:00:00',1,'{}','','','',627,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',391,'*',1);
+INSERT INTO `do77s_categories` VALUES (19,44,1,19,24,1,'demo','com_content','Demo','demo','','',1,0,'0000-00-00 00:00:00',1,'{}','','','',627,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',392,'*',1);
 INSERT INTO `do77s_categories` VALUES (20,45,19,20,21,2,'demo/news-floristics','com_content','ÕÓ‚ÓÒÚË ÓÚ‰ÂÎ‡ ‘ÀŒ–»—“» ¿','news-floristics','','',1,0,'0000-00-00 00:00:00',1,'{\"category_layout\":\"\",\"image\":\"\"}','','','{\"author\":\"\",\"robots\":\"\"}',627,'0000-00-00 00:00:00',628,'2013-11-21 11:19:35',38,'*',1);
 INSERT INTO `do77s_categories` VALUES (24,104,1,17,18,1,'joomla','com_banners','Joomla','joomla','','',1,0,'0000-00-00 00:00:00',1,'{}','','','',627,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'*',1);
 INSERT INTO `do77s_categories` VALUES (25,105,1,15,16,1,'text-ads','com_banners','Text Ads','text-ads','','',1,0,'0000-00-00 00:00:00',1,'{}','','','',627,'0000-00-00 00:00:00',0,'0000-00-00 00:00:00',0,'*',1);
@@ -1496,43 +1496,6 @@ CREATE TABLE `do77s_finder_filters` (
 LOCK TABLES `do77s_finder_filters` WRITE;
 /*!40000 ALTER TABLE `do77s_finder_filters` DISABLE KEYS */;
 /*!40000 ALTER TABLE `do77s_finder_filters` ENABLE KEYS */;
-UNLOCK TABLES;
-DROP TABLE IF EXISTS `do77s_finder_links`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `do77s_finder_links` (
-  `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `url` varchar(255) NOT NULL,
-  `route` varchar(255) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `indexdate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `md5sum` varchar(32) DEFAULT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '1',
-  `state` int(5) DEFAULT '1',
-  `access` int(5) DEFAULT '0',
-  `language` varchar(8) NOT NULL,
-  `publish_start_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `publish_end_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `start_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `end_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `list_price` double unsigned NOT NULL DEFAULT '0',
-  `sale_price` double unsigned NOT NULL DEFAULT '0',
-  `type_id` int(11) NOT NULL,
-  `object` mediumblob NOT NULL,
-  PRIMARY KEY (`link_id`),
-  KEY `idx_type` (`type_id`),
-  KEY `idx_title` (`title`),
-  KEY `idx_md5` (`md5sum`),
-  KEY `idx_url` (`url`(75)),
-  KEY `idx_published_list` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`list_price`),
-  KEY `idx_published_sale` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`sale_price`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
-LOCK TABLES `do77s_finder_links` WRITE;
-/*!40000 ALTER TABLE `do77s_finder_links` DISABLE KEYS */;
-/*!40000 ALTER TABLE `do77s_finder_links` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `do77s_finder_links_terms0`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -4034,7 +3997,7 @@ CREATE TABLE `do77s_session` (
 
 LOCK TABLES `do77s_session` WRITE;
 /*!40000 ALTER TABLE `do77s_session` DISABLE KEYS */;
-INSERT INTO `do77s_session` VALUES ('vqu7qd5sq0ab5jn3af18hnl8d4',0,1,'1386835991','__default|a:8:{s:15:\"session.counter\";i:2;s:19:\"session.timer.start\";i:1386835989;s:18:\"session.timer.last\";i:1386835989;s:17:\"session.timer.now\";i:1386835991;s:22:\"session.client.browser\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";b:0;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;i:1;}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";a:1:{i:0;i:1;}s:14:\"\\0\\0\\0_authLevels\";a:2:{i:0;i:1;i:1;i:1;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"de4bc5b2bdac435a70070cfc0b94de7b\";}',0,'');
+INSERT INTO `do77s_session` VALUES ('vqu7qd5sq0ab5jn3af18hnl8d4',0,1,'1386837678','__default|a:8:{s:15:\"session.counter\";i:6;s:19:\"session.timer.start\";i:1386835989;s:18:\"session.timer.last\";i:1386836804;s:17:\"session.timer.now\";i:1386837647;s:22:\"session.client.browser\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0\";s:8:\"registry\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:4:\"user\";O:5:\"JUser\":24:{s:9:\"\\0\\0\\0isRoot\";b:0;s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:6:\"groups\";a:1:{i:0;i:1;}s:5:\"guest\";i:1;s:13:\"lastResetTime\";N;s:10:\"resetCount\";N;s:10:\"\\0\\0\\0_params\";O:9:\"JRegistry\":1:{s:7:\"\\0\\0\\0data\";O:8:\"stdClass\":0:{}}s:14:\"\\0\\0\\0_authGroups\";a:1:{i:0;i:1;}s:14:\"\\0\\0\\0_authLevels\";a:2:{i:0;i:1;i:1;i:1;}s:15:\"\\0\\0\\0_authActions\";N;s:12:\"\\0\\0\\0_errorMsg\";N;s:10:\"\\0\\0\\0_errors\";a:0:{}s:3:\"aid\";i:0;}s:13:\"session.token\";s:32:\"de4bc5b2bdac435a70070cfc0b94de7b\";}',0,'');
 /*!40000 ALTER TABLE `do77s_session` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `do77s_template_styles`;
