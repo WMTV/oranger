@@ -49,7 +49,7 @@ h1.pagetitle{background-color: #f6f6f6;}
 /* L 01 - Left and Right Columns
 /* ----------------------------------------------*/
 #left {background-color: #111;}
-#right {background-color: #f5f5f5;}
+#right {background-color: #111;}
 #left2 {background-color: #f5f5f5;}
 #left3 {}
 .logo {background: <?php echo $params->basecolor1;?> url(<?php echo $imgpath; ?>/backgrounds/crosspat.png) repeat;}
