@@ -164,14 +164,18 @@ div#bottom1 .module, div#bottom2 .module, div#bottom3 .module, div#bottom4 .modu
 .dropstyles5 {border-left: 4px solid #93107f;}
 .dropstyles6 {border-left: 4px solid #108893;}
 
+//AleXS 13.12.2013
+/* 
 .menu1 {background: url(<?php echo $imgpath; ?>/backgrounds/menu1-s3.png) 100% 0 no-repeat;}
 .menu2 {background: url(<?php echo $imgpath; ?>/backgrounds/menu2-s3.png) 100% 0 no-repeat;}
 .menu3 {background: url(<?php echo $imgpath; ?>/backgrounds/menu3-s3.png) 100% 0 no-repeat;}
 .menu4 {background: url(<?php echo $imgpath; ?>/backgrounds/menu4-s3.png) 100% 0 no-repeat;}
 .menu5 {background: url(<?php echo $imgpath; ?>/backgrounds/menu5-s3.png) 100% 0 no-repeat;}
+*/
 
 ul.dualfish li a,ul.suckerfish li a,ul.dropline li a {font-size:1.1em!important;}
 ul.dualfish li ul.dualfish li a,ul.suckerfish li ul.suckerfish li a,ul.dropline li ul.dropline li a{font-size:0.9em!important;}
+
 /* ----------------------------------------------*/
 /* S 00 - Module Suffixes
 /* ----------------------------------------------*/
